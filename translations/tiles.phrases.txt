@@ -1,0 +1,18 @@
+"Phrases"
+{
+	"Teleported target"
+	{
+		"#format"	"{1:t}"
+		"en"	"Teleported {1}."
+	}
+	"Teleported to target"
+	{
+		"#format"	"{1:t}"
+		"en"	"teleported to {1}."
+	}
+	"Respawned target"
+	{
+		"#format"	"{1:t}"
+		"en"	"Respawned {1}."
+	}
+}

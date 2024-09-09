@@ -1,0 +1,1776 @@
+- - - - - 0000 AR2Explosion                     - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_szMaterialName                
+
+- - - - - 0001 CAI_BaseNPC                      - - - - -
+  00 00000000 baseclass                       
+  01 00000248 m_lifeState                     
+  02 00003708 m_bPerformAvoidance             
+  03 00003709 m_bIsMoving                     
+  04 00003710 m_bFadeCorpse                   
+  05 00002616 m_iDeathPose                    
+  06 00002620 m_iDeathFrame                   
+  07 00003712 m_bSpeedModActive               
+  08 00003716 m_iSpeedModRadius               
+  09 00003720 m_iSpeedModSpeed                
+  10 00003711 m_bImportanRagdoll              
+  11 00003724 m_flTimePingEffect              
+
+- - - - - 0002 CAlyxEmpEffect                   - - - - -
+  00 00000000 baseclass                       
+  01 00000896 m_nState                        
+  02 00000900 m_flDuration                    
+  03 00000904 m_flStartTime                   
+
+- - - - - 0003 CBaseAnimating                   - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_bGlowEnabled                  
+  02 00000876 m_iGlowColor_r                  
+  03 00000880 m_iGlowColor_g                  
+  04 00000884 m_iGlowColor_b                  
+  05 00000888 m_bGlowWhenOccluded             
+  06 00000889 m_bGlowWhenUnoccluded           
+  07 00000892 m_iGlowDist_InMin               
+  08 00000896 m_iGlowDist_InMax               
+  09 00000900 m_iGlowDist_OutMin              
+  10 00000904 m_iGlowDist_OutMax              
+  11 00000916 m_nForceBone                    
+  12 00000920 m_vecForce                      
+  13 00000932 m_nSkin                         
+  14 00000936 m_nBody                         
+  15 00000940 m_nHitboxSet                    
+  16 00000944 m_flModelScale                  
+  17 00000996 m_flPoseParameter               
+  18 00000992 m_nSequence                     
+  19 00000948 m_flPlaybackRate                
+  20 00001092 m_flEncodedController           
+  21 00001108 m_bClientSideAnimation          
+  22 00001109 m_bClientSideFrameReset         
+  23 00001112 m_nNewSequenceParity            
+  24 00001116 m_nResetEventsParity            
+  25 00001120 m_nMuzzleFlashParity            
+  26 00001124 m_hLightingOrigin               
+  27 00001128 m_hLightingOriginRelative       
+  28 00000000 serveranimdata                  
+  29 00001148 m_fadeMinDist                   
+  30 00001152 m_fadeMaxDist                   
+  31 00001156 m_flFadeScale                   
+
+- - - - - 0004 CBaseAnimatingOverlay            - - - - -
+  00 00000000 baseclass                       
+  01 00000000 overlay_vars                    
+
+- - - - - 0005 CBaseCombatCharacter             - - - - -
+  00 00000000 baseclass                       
+  01 00000000 bcc_localdata                   
+  02 00002276 m_hActiveWeapon                 
+  03 00002084 m_hMyWeapons                    
+
+- - - - - 0006 CBaseCombatWeapon                - - - - -
+  00 00000000 baseclass                       
+  01 00000000 LocalWeaponData                 
+  02 00000000 LocalActiveWeaponData           
+  03 00001240 m_iViewModelIndex               
+  04 00001244 m_iWorldModelIndex              
+  05 00001276 m_iState                        
+  06 00001208 m_hOwner                        
+
+- - - - - 0007 CBaseDoor                        - - - - -
+  00 00000000 baseclass                       
+  01 00001080 m_flWaveHeight                  
+
+- - - - - 0008 CBaseEntity                      - - - - -
+  00 00000000 AnimTimeMustBeFirst             
+  01 00000144 m_flSimulationTime              
+  02 00000816 m_vecOrigin                     
+  03 00000148 m_ubInterpolationFrame          
+  04 00000130 m_nModelIndex                   
+  05 00000348 m_Collision                     
+  06 00000128 m_nRenderFX                     
+  07 00000129 m_nRenderMode                   
+  08 00000212 m_fEffects                      
+  09 00000132 m_clrRender                     
+  10 00000516 m_iTeamNum                      
+  11 00000496 m_CollisionGroup                
+  12 00000636 m_flElasticity                  
+  13 00000504 m_flShadowCastDistance          
+  14 00000488 m_hOwnerEntity                  
+  15 00000492 m_hEffectEntity                 
+  16 00000336 moveparent                      
+  17 00000333 m_iParentAttachment             
+  18 00000334 movetype                        
+  19 00000335 movecollide                     
+  20 00000828 m_angRotation                   
+  21 00000680 m_iTextureFrameIndex            
+  22 00000000 predictable_id                  
+  23 00000681 m_bSimulatedEveryTick           
+  24 00000682 m_bAnimatedEveryTick            
+  25 00000683 m_bAlternateSorting             
+  26 00000008 m_SynergySaveRestore_SteamIDOwner
+
+- - - - - 0009 CBaseFlex                        - - - - -
+  00 00000000 baseclass                       
+  01 00001224 m_flexWeight                    
+  02 00001620 m_blinktoggle                   
+  03 00001608 m_viewtarget                    
+  04 00000844 m_vecViewOffset[0]              
+  05 00000848 m_vecViewOffset[1]              
+  06 00000852 m_vecViewOffset[2]              
+  07 00001728 m_vecLean                       
+  08 00001740 m_vecShift                      
+
+- - - - - 0010 CBaseGrenade                     - - - - -
+  00 00000000 baseclass                       
+  01 00002372 m_flDamage                      
+  02 00002352 m_DmgRadius                     
+  03 00002349 m_bIsLive                       
+  04 00002380 m_hThrower                      
+  05 00000668 m_vecVelocity                   
+  06 00000280 m_fFlags                        
+
+- - - - - 0011 CBaseHelicopter                  - - - - -
+  00 00000000 baseclass                       
+  01 00004032 m_flStartupTime                 
+
+- - - - - 0012 CBaseHL2MPBludgeonWeapon         - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0013 CBaseHL2MPCombatWeapon           - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0014 CBaseHLBludgeonWeapon            - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0015 CBaseHLCombatWeapon              - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0016 CBaseParticleEntity              - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0017 CBasePlayer                      - - - - -
+  00 00000000 baseclass                       
+  01 00003184 pl                              
+  02 00003368 m_hVehicle                      
+  03 00003348 m_bHasUseEntity                 
+  04 00000240 m_iMaxHealth                    
+  05 00001828 m_iAmmo                         
+  06 00003352 m_hUseEntity                    
+  07 00000244 m_iHealth                       
+  08 00000248 m_lifeState                     
+  09 00003380 m_iBonusProgress                
+  10 00003384 m_iBonusChallenge               
+  11 00004100 m_flMaxspeed                    
+  12 00000280 m_fFlags                        
+  13 00003428 m_iObserverMode                 
+  14 00003452 m_hObserverTarget               
+  15 00003432 m_iFOV                          
+  16 00003440 m_iFOVStart                     
+  17 00003444 m_flFOVTime                     
+  18 00003436 m_iDefaultFOV                   
+  19 00003460 m_hZoomOwner                    
+  20 00003976 m_hViewModel                    
+  21 00000000 m_hViewModel                    
+  22 00004372 m_szLastPlaceName               
+  23 00002524 m_szSkyName                     
+  24 00002588 m_szSkyCameraName               
+  25 00002408 m_flStartCharge                 
+  26 00002412 m_flAmmoStartCharge             
+  27 00002416 m_flPlayAftershock              
+  28 00002420 m_flNextAmmoBurn                
+  29 00000000 localdata                       
+
+- - - - - 0018 CBaseProjectile                  - - - - -
+  00 00000000 baseclass                       
+  01 00001216 m_hOriginalLauncher             
+
+- - - - - 0019 CBasePropDoor                    - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0020 CBaseTeamObjectiveResource       - - - - -
+  00 00000872 m_iTimerToShowInHUD             
+  01 00000876 m_iStopWatchTimer               
+  02 00000880 m_iNumControlPoints             
+  03 00000884 m_bPlayingMiniRounds            
+  04 00000885 m_bControlPointsReset           
+  05 00000888 m_iUpdateCapHudParity           
+  06 00000892 m_vCPPositions                  
+  07 00000000 m_vCPPositions                  
+  08 00000988 m_bCPIsVisible                  
+  09 00001020 m_flLazyCapPerc                 
+  10 00001052 m_iTeamIcons                    
+  11 00001308 m_iTeamOverlays                 
+  12 00001564 m_iTeamReqCappers               
+  13 00001820 m_flTeamCapTime                 
+  14 00002076 m_iPreviousPoints               
+  15 00002844 m_bTeamCanCap                   
+  16 00002908 m_iTeamBaseIcons                
+  17 00003036 m_iBaseControlPoints            
+  18 00003164 m_bInMiniRound                  
+  19 00003172 m_iWarnOnCap                    
+  20 00003204 m_iszWarnSound                  
+  21 00000000 m_iszWarnSound                  
+  22 00003236 m_flPathDistance                
+  23 00003748 m_iCPGroup                      
+  24 00003268 m_bCPLocked                     
+  25 00003812 m_nNumNodeHillData              
+  26 00003828 m_flNodeHillData                
+  27 00003988 m_bTrackAlarm                   
+  28 00003276 m_flUnlockTimes                 
+  29 00003992 m_bHillIsDownhill               
+  30 00003308 m_flCPTimerTimes                
+  31 00003340 m_iNumTeamMembers               
+  32 00003596 m_iCappingTeam                  
+  33 00003628 m_iTeamInZone                   
+  34 00003660 m_bBlocked                      
+  35 00003668 m_iOwner                        
+  36 00003700 m_bCPCapRateScalesWithPlayers   
+  37 00003708 m_pszCapLayoutInHUD             
+  38 00003740 m_flCustomPositionX             
+  39 00003744 m_flCustomPositionY             
+
+- - - - - 0021 CBaseTempEntity                  - - - - -
+
+- - - - - 0022 CBaseViewModel                   - - - - -
+  00 00000130 m_nModelIndex                   
+  01 00000936 m_nBody                         
+  02 00000932 m_nSkin                         
+  03 00000992 m_nSequence                     
+  04 00001220 m_nViewModelIndex               
+  05 00000948 m_flPlaybackRate                
+  06 00000212 m_fEffects                      
+  07 00001236 m_nAnimationParity              
+  08 00001248 m_hWeapon                       
+  09 00001224 m_hOwner                        
+  10 00001112 m_nNewSequenceParity            
+  11 00001116 m_nResetEventsParity            
+  12 00001120 m_nMuzzleFlashParity            
+  13 00000996 m_flPoseParameter               
+  14 00000000 m_flPoseParameter               
+
+- - - - - 0023 CBeam                            - - - - -
+  00 00000896 m_nBeamType                     
+  01 00000900 m_nBeamFlags                    
+  02 00000888 m_nNumBeamEnts                  
+  03 00000904 m_hAttachEntity                 
+  04 00000944 m_nAttachIndex                  
+  05 00000892 m_nHaloIndex                    
+  06 00000996 m_fHaloScale                    
+  07 00000984 m_fWidth                        
+  08 00000988 m_fEndWidth                     
+  09 00000992 m_fFadeLength                   
+  10 00001000 m_fAmplitude                    
+  11 00001004 m_fStartFrame                   
+  12 00001008 m_fSpeed                        
+  13 00000128 m_nRenderFX                     
+  14 00000129 m_nRenderMode                   
+  15 00000872 m_flFrameRate                   
+  16 00000876 m_flHDRColorScale               
+  17 00001016 m_flFrame                       
+  18 00000132 m_clrRender                     
+  19 00001020 m_vecEndPos                     
+  20 00000130 m_nModelIndex                   
+  21 00000816 m_vecOrigin                     
+  22 00000336 moveparent                      
+  23 00001012 m_nMinDXLevel                   
+  24 00000000 beampredictable_id              
+
+- - - - - 0024 CBoneFollower                    - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_modelIndex                    
+  02 00000876 m_solidIndex                    
+
+- - - - - 0025 CBreakableProp                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0026 CBreakableSurface                - - - - -
+  00 00000000 baseclass                       
+  01 00001048 m_nNumWide                      
+  02 00001052 m_nNumHigh                      
+  03 00001056 m_flPanelWidth                  
+  04 00001060 m_flPanelHeight                 
+  05 00001064 m_vNormal                       
+  06 00001076 m_vCorner                       
+  07 00001088 m_bIsBroken                     
+  08 00001092 m_nSurfaceType                  
+  09 00002180 m_RawPanelBitVec                
+
+- - - - - 0027 CCitadelEnergyCore               - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_flScale                       
+  02 00000876 m_nState                        
+  03 00000880 m_flDuration                    
+  04 00000884 m_flStartTime                   
+  05 00000272 m_spawnflags                    
+
+- - - - - 0028 CColorCorrection                 - - - - -
+  00 00000816 m_vecOrigin                     
+  01 00000904 m_MinFalloff                    
+  02 00000908 m_MaxFalloff                    
+  03 00000912 m_flCurWeight                   
+  04 00000916 m_netlookupFilename             
+  05 00000901 m_bEnabled                      
+
+- - - - - 0029 CColorCorrectionVolume           - - - - -
+  00 00001192 m_Weight                        
+  01 00001200 m_lookupFilename                
+
+- - - - - 0030 CCorpse                          - - - - -
+  00 00000000 baseclass                       
+  01 00001204 m_nReferencePlayer              
+
+- - - - - 0031 CCrossbowBolt                    - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0032 CDynamicLight                    - - - - -
+  00 00000000 baseclass                       
+  01 00000873 m_Flags                         
+  02 00000874 m_LightStyle                    
+  03 00000876 m_Radius                        
+  04 00000880 m_Exponent                      
+  05 00000884 m_InnerAngle                    
+  06 00000888 m_OuterAngle                    
+  07 00000892 m_SpotRadius                    
+
+- - - - - 0033 CDynamicProp                     - - - - -
+  00 00000000 baseclass                       
+  01 00001620 m_bUseHitboxesForRenderBox      
+
+- - - - - 0034 CEmbers                          - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_nDensity                      
+  02 00000876 m_nLifetime                     
+  03 00000880 m_nSpeed                        
+  04 00000884 m_bEmit                         
+
+- - - - - 0035 CEntityDissolve                  - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_flStartTime                   
+  02 00000876 m_flFadeInStart                 
+  03 00000880 m_flFadeInLength                
+  04 00000884 m_flFadeOutModelStart           
+  05 00000888 m_flFadeOutModelLength          
+  06 00000892 m_flFadeOutStart                
+  07 00000896 m_flFadeOutLength               
+  08 00000900 m_nDissolveType                 
+  09 00000904 m_vDissolverOrigin              
+  10 00000916 m_nMagnitude                    
+
+- - - - - 0036 CEntityFlame                     - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_hEntAttached                  
+
+- - - - - 0037 CEntityParticleTrail             - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_iMaterialName                 
+  02 00000876 m_Info                          
+  03 00000896 m_hConstraintEntity             
+
+- - - - - 0038 CEnvDetailController             - - - - -
+  00 00000872 m_flFadeStartDist               
+  01 00000876 m_flFadeEndDist                 
+
+- - - - - 0039 CEnvHeadcrabCanister             - - - - -
+  00 00000000 baseclass                       
+  01 00001208 m_Shared                        
+  02 00001204 m_bLanded                       
+
+- - - - - 0040 CEnvParticleScript               - - - - -
+  00 00000000 baseclass                       
+  01 00001204 m_flSequenceScale               
+
+- - - - - 0041 CEnvProjectedTexture             - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_hTargetEntity                 
+  02 00000876 m_bState                        
+  03 00000880 m_flLightFOV                    
+  04 00000884 m_bEnableShadows                
+  05 00000885 m_bLightOnlyTarget              
+  06 00000886 m_bLightWorld                   
+  07 00000887 m_bCameraSpace                  
+  08 00000888 m_LinearFloatLightColor         
+  09 00000900 m_flAmbient                     
+  10 00000904 m_SpotlightTextureName          
+  11 00001164 m_nSpotlightTextureFrame        
+  12 00001168 m_flNearZ                       
+  13 00001172 m_flFarZ                        
+  14 00001176 m_nShadowQuality                
+
+- - - - - 0042 CEnvQuadraticBeam                - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_targetPosition                
+  02 00000884 m_controlPosition               
+  03 00000896 m_scrollRate                    
+  04 00000900 m_flWidth                       
+
+- - - - - 0043 CEnvScreenEffect                 - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_flDuration                    
+  02 00000876 m_nType                         
+
+- - - - - 0044 CEnvScreenOverlay                - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_iszOverlayNames               
+  02 00000000 m_iszOverlayNames               
+  03 00000912 m_flOverlayTimes                
+  04 00000000 m_flOverlayTimes                
+  05 00000952 m_flStartTime                   
+  06 00000956 m_iDesiredOverlay               
+  07 00000960 m_bIsActive                     
+  08 00000964 m_nUserId                       
+
+- - - - - 0045 CEnvStarfield                    - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_bOn                           
+  02 00000876 m_flDensity                     
+
+- - - - - 0046 CEnvTonemapController            - - - - -
+  00 00000000 baseclass                       
+  01 00000888 m_bUseCustomAutoExposureMin     
+  02 00000889 m_bUseCustomAutoExposureMax     
+  03 00000890 m_bUseCustomBloomScale          
+  04 00000892 m_flCustomAutoExposureMin       
+  05 00000896 m_flCustomAutoExposureMax       
+  06 00000900 m_flCustomBloomScale            
+  07 00000904 m_flCustomBloomScaleMinimum     
+
+- - - - - 0047 CEnvWind                         - - - - -
+  00 00000872 m_EnvWindShared                 
+
+- - - - - 0048 CFireSmoke                       - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_flStartScale                  
+  02 00000876 m_flScale                       
+  03 00000880 m_flScaleTime                   
+  04 00000884 m_nFlags                        
+  05 00000888 m_nFlameModelIndex              
+  06 00000892 m_nFlameFromAboveModelIndex     
+
+- - - - - 0049 CFireTrail                       - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_nAttachment                   
+  02 00000876 m_flLifetime                    
+
+- - - - - 0050 CFish                            - - - - -
+  00 00001256 m_poolOrigin                    
+  01 00001224 m_angle                         
+  02 00001212 m_x                             
+  03 00001216 m_y                             
+  04 00001220 m_z                             
+  05 00000130 m_nModelIndex                   
+  06 00000248 m_lifeState                     
+  07 00001268 m_waterLevel                    
+
+- - - - - 0051 CFlare                           - - - - -
+  00 00000000 baseclass                       
+  01 00002352 m_flTimeBurnOut                 
+  02 00002356 m_flScale                       
+  03 00002373 m_bLight                        
+  04 00002374 m_bSmoke                        
+  05 00002375 m_bPropFlare                    
+
+- - - - - 0052 CFleshEffectTarget               - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_flRadius                      
+  02 00000876 m_flScaleTime                   
+
+- - - - - 0053 CFogController                   - - - - -
+  00 00000936 m_fog.enable                    
+  01 00000937 m_fog.blend                     
+  02 00000876 m_fog.dirPrimary                
+  03 00000888 m_fog.colorPrimary              
+  04 00000892 m_fog.colorSecondary            
+  05 00000904 m_fog.start                     
+  06 00000908 m_fog.end                       
+  07 00000916 m_fog.maxdensity                
+  08 00000912 m_fog.farz                      
+  09 00000896 m_fog.colorPrimaryLerpTo        
+  10 00000900 m_fog.colorSecondaryLerpTo      
+  11 00000920 m_fog.startLerpTo               
+  12 00000924 m_fog.endLerpTo                 
+  13 00000928 m_fog.lerptime                  
+  14 00000932 m_fog.duration                  
+
+- - - - - 0054 CFunc_Dust                       - - - - -
+  00 00000872 m_Color                         
+  01 00000876 m_SpawnRate                     
+  02 00000888 m_SpeedMax                      
+  03 00000880 m_flSizeMin                     
+  04 00000884 m_flSizeMax                     
+  05 00000900 m_DistMax                       
+  06 00000892 m_LifetimeMin                   
+  07 00000896 m_LifetimeMax                   
+  08 00000908 m_DustFlags                     
+  09 00000130 m_nModelIndex                   
+  10 00000904 m_FallSpeed                     
+  11 00000348 m_Collision                     
+
+- - - - - 0055 CFunc_LOD                        - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_fDisappearDist                
+
+- - - - - 0056 CFuncAreaPortalWindow            - - - - -
+  00 00000000 baseclass                       
+  01 00000888 m_flFadeDist                    
+  02 00000884 m_flFadeStartDist               
+  03 00000892 m_flTranslucencyLimit           
+  04 00000900 m_iBackgroundModelIndex         
+
+- - - - - 0057 CFuncConveyor                    - - - - -
+  00 00000000 baseclass                       
+  01 00000888 m_flConveyorSpeed               
+
+- - - - - 0058 CFuncLadder                      - - - - -
+  00 00000000 baseclass                       
+  01 00000904 m_vecPlayerMountPositionTop     
+  02 00000916 m_vecPlayerMountPositionBottom  
+  03 00000872 m_vecLadderDir                  
+  04 00000929 m_bFakeLadder                   
+
+- - - - - 0059 CFuncMonitor                     - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0060 CFuncOccluder                    - - - - -
+  00 00000872 m_bActive                       
+  01 00000876 m_nOccluderIndex                
+
+- - - - - 0061 CFuncReflectiveGlass             - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0062 CFuncRotating                    - - - - -
+  00 00000000 baseclass                       
+  01 00000000 m_angRotation                   
+  02 00000000 m_vecOrigin                     
+  03 00000000 m_flSimulationTime              
+  04 00000816 m_vecOrigin                     
+  05 00000828 m_angRotation[0]                
+  06 00000832 m_angRotation[1]                
+  07 00000836 m_angRotation[2]                
+  08 00000144 m_flSimulationTime              
+
+- - - - - 0063 CFuncSmokeVolume                 - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_Color1                        
+  02 00000876 m_Color2                        
+  03 00000880 m_MaterialName                  
+  04 00001140 m_ParticleDrawWidth             
+  05 00001144 m_ParticleSpacingDistance       
+  06 00001148 m_DensityRampSpeed              
+  07 00001152 m_RotationSpeed                 
+  08 00001156 m_MovementSpeed                 
+  09 00001160 m_Density                       
+  10 00000272 m_spawnflags                    
+
+- - - - - 0064 CFuncTrackTrain                  - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0065 CGameRulesProxy                  - - - - -
+
+- - - - - 0066 CHalfLife2Proxy                  - - - - -
+  00 00000000 baseclass                       
+  01 00000000 hl2_gamerules_data              
+
+- - - - - 0067 CHalfLife2SurvivalProxy          - - - - -
+  00 00000000 baseclass                       
+  01 00000000 hl2_survival_gamerules_data     
+
+- - - - - 0068 CHandleTest                      - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_Handle                        
+  02 00000876 m_bSendHandle                   
+
+- - - - - 0069 CHL2_Player                      - - - - -
+  00 00000000 baseclass                       
+  01 00005000 m_HL2Local                      
+  02 00005124 m_fIsSprinting                  
+
+- - - - - 0070 CHL2MP_Player                    - - - - -
+  00 00000000 baseclass                       
+  01 00000000 m_flPoseParameter               
+  02 00000000 m_flPlaybackRate                
+  03 00000000 m_nSequence                     
+  04 00000000 overlay_vars                    
+  05 00000000 m_vecOrigin                     
+  06 00000000 m_flCycle                       
+  07 00000000 m_flAnimTime                    
+  08 00000000 m_flexWeight                    
+  09 00000000 m_blinktoggle                   
+  10 00000000 m_viewtarget                    
+  11 00005468 m_angEyeAngles[0]               
+  12 00005472 m_angEyeAngles[1]               
+  13 00000000 hl2mplocaldata                  
+  14 00000000 hl2mpnonlocaldata               
+  15 00005492 m_iSpawnInterpCounter           
+  16 00005464 m_hRagdoll                      
+  17 00005436 m_iPlayerColor                  
+  18 00000000 m_iPlayerColor                  
+
+- - - - - 0071 CHL2MPGameRulesProxy             - - - - -
+  00 00000000 baseclass                       
+  01 00000000 hl2mp_gamerules_data            
+
+- - - - - 0072 CHL2MPMachineGun                 - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0073 CHL2MPRagdoll                    - - - - -
+  00 00001240 m_vecRagdollOrigin              
+  01 00001224 m_hPlayer                       
+  02 00000130 m_nModelIndex                   
+  03 00000916 m_nForceBone                    
+  04 00000920 m_vecForce                      
+  05 00001252 m_bExplode                      
+  06 00001228 m_vecRagdollVelocity            
+
+- - - - - 0074 CHLMachineGun                    - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0075 CHLSelectFireMachineGun          - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0076 CInfoLadderDismount              - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0077 CInfoLightingRelative            - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_hLightingLandmark             
+
+- - - - - 0078 CInfoOverlayAccessor             - - - - -
+  00 00000680 m_iTextureFrameIndex            
+  01 00000872 m_iOverlayID                    
+
+- - - - - 0079 CInfoTeleporterCountdown         - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_bCountdownStarted             
+  02 00000873 m_bDisabled                     
+  03 00000876 m_flStartTime                   
+  04 00000880 m_flTimeRemaining               
+
+- - - - - 0080 CLaserDot                        - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0081 CLightGlow                       - - - - -
+  00 00000132 m_clrRender                     
+  01 00000872 m_nHorizontalSize               
+  02 00000876 m_nVerticalSize                 
+  03 00000880 m_nMinDist                      
+  04 00000884 m_nMaxDist                      
+  05 00000888 m_nOuterMaxDist                 
+  06 00000272 m_spawnflags                    
+  07 00000816 m_vecOrigin                     
+  08 00000828 m_angRotation                   
+  09 00000336 moveparent                      
+  10 00000892 m_flGlowProxySize               
+  11 00000896 HDRColorScale                   
+
+- - - - - 0082 CMaterialModifyControl           - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_szMaterialName                
+  02 00001127 m_szMaterialVar                 
+  03 00001382 m_szMaterialVarValue            
+  04 00001640 m_iFrameStart                   
+  05 00001644 m_iFrameEnd                     
+  06 00001648 m_bWrap                         
+  07 00001652 m_flFramerate                   
+  08 00001656 m_bNewAnimCommandsSemaphore     
+  09 00001660 m_flFloatLerpStartValue         
+  10 00001664 m_flFloatLerpEndValue           
+  11 00001668 m_flFloatLerpTransitionTime     
+  12 00001672 m_nModifyMode                   
+
+- - - - - 0083 CMortarShell                     - - - - -
+  00 00000000 baseclass                       
+  01 00000944 m_flLifespan                    
+  02 00000948 m_flRadius                      
+  03 00000952 m_vecSurfaceNormal              
+
+- - - - - 0084 CNPC_AntlionGuard                - - - - -
+  00 00000000 baseclass                       
+  01 00003786 m_bCavernBreed                  
+  02 00003787 m_bInCavern                     
+  03 00003932 m_iBleedingLevel                
+
+- - - - - 0085 CNPC_Barnacle                    - - - - -
+  00 00000000 baseclass                       
+  01 00003780 m_flAltitude                    
+  02 00003808 m_vecRoot                       
+  03 00003820 m_vecTip                        
+  04 00003832 m_vecTipDrawOffset              
+
+- - - - - 0086 CNPC_Barney                      - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0087 CNPC_CombineGunship              - - - - -
+  00 00000000 baseclass                       
+  01 00004356 m_vecHitPos                     
+
+- - - - - 0088 CNPC_Gargantua                   - - - - -
+  00 00000000 baseclass                       
+  01 00003748 m_iFlameState                   
+
+- - - - - 0089 CNPC_Manhack                     - - - - -
+  00 00000000 baseclass                       
+  01 00004028 m_nEnginePitch1                 
+  02 00004036 m_flEnginePitch1Time            
+  03 00004032 m_nEnginePitch2                 
+
+- - - - - 0090 CNPC_Puppet                      - - - - -
+  00 00000000 baseclass                       
+  01 00003740 m_hAnimationTarget              
+  02 00003744 m_nTargetAttachment             
+
+- - - - - 0091 CNPC_RollerMine                  - - - - -
+  00 00000000 baseclass                       
+  01 00003912 m_bIsOpen                       
+  02 00003916 m_flActiveTime                  
+  03 00003941 m_bHackedByAlyx                 
+  04 00003950 m_bPowerDown                    
+
+- - - - - 0092 CNPC_Strider                     - - - - -
+  00 00000000 baseclass                       
+  01 00003812 m_vecHitPos                     
+  02 00003824 m_vecIKTarget[0]                
+  03 00003836 m_vecIKTarget[1]                
+  04 00003848 m_vecIKTarget[2]                
+  05 00003860 m_vecIKTarget[3]                
+  06 00003872 m_vecIKTarget[4]                
+  07 00003884 m_vecIKTarget[5]                
+
+- - - - - 0093 CNPC_Vortigaunt                  - - - - -
+  00 00000000 baseclass                       
+  01 00005960 m_flBlueEndFadeTime             
+  02 00005956 m_bIsBlue                       
+  03 00005964 m_bIsBlack                      
+
+- - - - - 0094 CParticleFire                    - - - - -
+  00 00000872 m_vOrigin                       
+  01 00000884 m_vDirection                    
+
+- - - - - 0095 CParticlePerformanceMonitor      - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_bDisplayPerf                  
+  02 00000873 m_bMeasurePerf                  
+
+- - - - - 0096 CParticleSystem                  - - - - -
+  00 00000816 m_vecOrigin                     
+  01 00000488 m_hOwnerEntity                  
+  02 00000336 moveparent                      
+  03 00000333 m_iParentAttachment             
+  04 00000828 m_angRotation                   
+  05 00000884 m_iEffectIndex                  
+  06 00000880 m_bActive                       
+  07 00000888 m_flStartTime                   
+  08 00001144 m_hControlPointEnts             
+  09 00001396 m_iControlPointParents          
+  10 00001459 m_bWeatherEffect                
+
+- - - - - 0097 CPhysBox                         - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0098 CPhysBoxMultiplayer              - - - - -
+  00 00000000 baseclass                       
+  01 00001284 m_iPhysicsMode                  
+  02 00001288 m_fMass                         
+
+- - - - - 0099 CPhysicsProp                     - - - - -
+  00 00000000 baseclass                       
+  01 00001782 m_bAwake                        
+
+- - - - - 0100 CPhysicsPropMultiplayer          - - - - -
+  00 00000000 baseclass                       
+  01 00001788 m_iPhysicsMode                  
+  02 00001792 m_fMass                         
+  03 00001800 m_collisionMins                 
+  04 00001812 m_collisionMaxs                 
+
+- - - - - 0101 CPhysMagnet                      - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0102 CPlasma                          - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_flScale                       
+  02 00000880 m_flScaleTime                   
+  03 00000884 m_nFlags                        
+  04 00000888 m_nPlasmaModelIndex             
+  05 00000892 m_nPlasmaModelIndex2            
+  06 00000896 m_nGlowModelIndex               
+
+- - - - - 0103 CPlayerPickupController          - - - - -
+  00 00000000 baseclass                       
+  01 00009196 m_pPlayer                       
+  02 00009200 m_hEnt                          
+  03 00009204 m_bClearVelocity                
+
+- - - - - 0104 CPlayerResource                  - - - - -
+  00 00000872 m_iPing                         
+  01 00001384 m_iScore                        
+  02 00001896 m_iPoints                       
+  03 00002408 m_iDeaths                       
+  04 00002920 m_bConnected                    
+  05 00003432 m_iTeam                         
+  06 00003944 m_bAlive                        
+  07 00004456 m_iHealth                       
+  08 00004968 m_iArmor                        
+  09 00005480 m_vPosition                     
+
+- - - - - 0105 CPointCamera                     - - - - -
+  00 00000000 baseclass                       
+  01 00000880 m_FOV                           
+  02 00000884 m_Resolution                    
+  03 00000888 m_bFogEnable                    
+  04 00000889 m_FogColor                      
+  05 00000896 m_flFogStart                    
+  06 00000900 m_flFogEnd                      
+  07 00000904 m_flFogMaxDensity               
+  08 00000908 m_bActive                       
+  09 00000909 m_bUseScreenAspectRatio         
+
+- - - - - 0106 CPointCommentaryNode             - - - - -
+  00 00000000 baseclass                       
+  01 00001352 m_bActive                       
+  02 00001212 m_iszCommentaryFile             
+  03 00001216 m_iszCommentaryFileNoHDR        
+  04 00001356 m_flStartTime                   
+  05 00001360 m_iszSpeakers                   
+  06 00001364 m_iNodeNumber                   
+  07 00001368 m_iNodeNumberMax                
+  08 00001236 m_hViewPosition                 
+
+- - - - - 0107 CPoseController                  - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_hProps                        
+  02 00000888 m_chPoseIndex                   
+  03 00000893 m_bPoseValueParity              
+  04 00000904 m_fPoseValue                    
+  05 00000908 m_fInterpolationTime            
+  06 00000912 m_bInterpolationWrap            
+  07 00000916 m_fCycleFrequency               
+  08 00000920 m_nFModType                     
+  09 00000924 m_fFModTimeOffset               
+  10 00000928 m_fFModRate                     
+  11 00000932 m_fFModAmplitude                
+
+- - - - - 0108 CPrecipitation                   - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_nPrecipType                   
+
+- - - - - 0109 CPredictedViewModel              - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0110 CPropAirboat                     - - - - -
+  00 00000000 baseclass                       
+  01 00001948 m_bHeadlightIsOn                
+  02 00002052 m_nExactWaterLevel              
+  03 00000523 m_nWaterLevel                   
+  04 00000000 m_vecGunCrosshair               
+  05 00000000 m_flSimulationTime              
+  06 00000000 AirBoat_DriversOnly             
+  07 00000000 AirBoat_AllOtherDrivers         
+
+- - - - - 0111 CPropCombineBall                 - - - - -
+  00 00000000 baseclass                       
+  01 00001260 m_bEmit                         
+  02 00001264 m_flRadius                      
+  03 00001261 m_bHeld                         
+  04 00001262 m_bLaunched                     
+
+- - - - - 0112 CPropCrane                       - - - - -
+  00 00000000 baseclass                       
+  01 00001668 m_hPlayer                       
+  02 00001672 m_bMagnetOn                     
+  03 00001685 m_bEnterAnimOn                  
+  04 00001686 m_bExitAnimOn                   
+  05 00001688 m_vecEyeExitEndpoint            
+
+- - - - - 0113 CPropJeep                        - - - - -
+  00 00000000 baseclass                       
+  01 00002085 m_bHeadlightIsOn                
+
+- - - - - 0114 CPropJeepEpisodic                - - - - -
+  00 00000000 baseclass                       
+  01 00002264 m_iNumRadarContacts             
+  02 00002268 m_vecRadarContactPos            
+  03 00000000 m_vecRadarContactPos            
+  04 00002556 m_iRadarContactType             
+  05 00000000 m_iRadarContactType             
+
+- - - - - 0115 CPropMPV                         - - - - -
+  00 00000000 baseclass                       
+  01 00002100 m_iVehicleHealth                
+  02 00002104 m_iVehicleMaxHealth             
+
+- - - - - 0116 CPropScalable                    - - - - -
+  00 00000000 baseclass                       
+  01 00001204 m_flScaleX                      
+  02 00001208 m_flScaleY                      
+  03 00001212 m_flScaleZ                      
+  04 00001216 m_flLerpTimeX                   
+  05 00001220 m_flLerpTimeY                   
+  06 00001224 m_flLerpTimeZ                   
+  07 00001228 m_flGoalTimeX                   
+  08 00001232 m_flGoalTimeY                   
+  09 00001236 m_flGoalTimeZ                   
+
+- - - - - 0117 CPropVehicleChoreoGeneric        - - - - -
+  00 00000000 baseclass                       
+  01 00001652 m_hPlayer                       
+  02 00002693 m_bEnterAnimOn                  
+  03 00002694 m_bExitAnimOn                   
+  04 00002696 m_vecEyeExitEndpoint            
+  05 00001660 m_vehicleView.bClampEyeAngles   
+  06 00001664 m_vehicleView.flPitchCurveZero  
+  07 00001668 m_vehicleView.flPitchCurveLinear
+  08 00001672 m_vehicleView.flRollCurveZero   
+  09 00001676 m_vehicleView.flRollCurveLinear 
+  10 00001680 m_vehicleView.flFOV             
+  11 00001684 m_vehicleView.flYawMin          
+  12 00001688 m_vehicleView.flYawMax          
+  13 00001692 m_vehicleView.flPitchMin        
+  14 00001696 m_vehicleView.flPitchMax        
+
+- - - - - 0118 CPropVehicleDriveable            - - - - -
+  00 00000000 baseclass                       
+  01 00001784 m_hPlayer                       
+  02 00001788 m_nSpeed                        
+  03 00001792 m_nRPM                          
+  04 00001796 m_flThrottle                    
+  05 00001800 m_nBoostTimeLeft                
+  06 00001804 m_nHasBoost                     
+  07 00001834 m_nScannerDisabledWeapons       
+  08 00001835 m_nScannerDisabledVehicle       
+  09 00001852 m_bEnterAnimOn                  
+  10 00001853 m_bExitAnimOn                   
+  11 00001832 m_bUnableToFire                 
+  12 00001808 m_vecEyeExitEndpoint            
+  13 00001833 m_bHasGun                       
+  14 00001820 m_vecGunCrosshair               
+  15 00001580 m_hPassengers                   
+  16 00000000 m_hPassengers                   
+  17 00001612 m_iPassengerCount               
+
+- - - - - 0119 CPropVehiclePrisonerPod          - - - - -
+  00 00000000 baseclass                       
+  01 00001788 m_hPlayer                       
+  02 00002741 m_bEnterAnimOn                  
+  03 00002742 m_bExitAnimOn                   
+  04 00002744 m_vecEyeExitEndpoint            
+
+- - - - - 0120 CRagdollManager                  - - - - -
+  00 00000872 m_iCurrentMaxRagdollCount       
+
+- - - - - 0121 CRagdollProp                     - - - - -
+  00 00000000 baseclass                       
+  01 00002204 m_ragAngles                     
+  02 00000000 m_ragAngles                     
+  03 00001916 m_ragPos                        
+  04 00000000 m_ragPos                        
+  05 00002496 m_hUnragdoll                    
+  06 00002540 m_flBlendWeight                 
+  07 00002544 m_nOverlaySequence              
+
+- - - - - 0122 CRagdollPropAttached             - - - - -
+  00 00000000 baseclass                       
+  01 00003128 m_boneIndexAttached             
+  02 00003132 m_ragdollAttachedObjectIndex    
+  03 00003136 m_attachmentPointBoneSpace      
+  04 00003148 m_attachmentPointRagdollSpace   
+
+- - - - - 0123 CRopeKeyframe                    - - - - -
+  00 00000936 m_hStartPoint                   
+  01 00000940 m_hEndPoint                     
+  02 00000944 m_iStartAttachment              
+  03 00000946 m_iEndAttachment                
+  04 00000884 m_Slack                         
+  05 00000916 m_RopeLength                    
+  06 00000920 m_fLockedPoints                 
+  07 00000876 m_RopeFlags                     
+  08 00000896 m_nSegments                     
+  09 00000900 m_bConstrainBetweenEndpoints    
+  10 00000908 m_iRopeMaterialModelIndex       
+  11 00000912 m_Subdiv                        
+  12 00000892 m_TextureScale                  
+  13 00000888 m_Width                         
+  14 00000928 m_flScrollSpeed                 
+  15 00000816 m_vecOrigin                     
+  16 00000336 moveparent                      
+  17 00000333 m_iParentAttachment             
+
+- - - - - 0124 CRotorWashEmitter                - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_flAltitude                    
+
+- - - - - 0125 CSceneEntity                     - - - - -
+  00 00001052 m_nSceneStringIndex             
+  01 00000956 m_bIsPlayingBack                
+  02 00000957 m_bPaused                       
+  03 00000958 m_bMultiplayer                  
+  04 00000960 m_flForceClientTime             
+  05 00000000 m_hActorList                    
+
+- - - - - 0126 CScriptIntro                     - - - - -
+  00 00000000 baseclass                       
+  01 00000896 m_vecCameraView                 
+  02 00000908 m_vecCameraViewAngles           
+  03 00000920 m_iBlendMode                    
+  04 00000924 m_iNextBlendMode                
+  05 00000928 m_flNextBlendTime               
+  06 00000932 m_flBlendStartTime              
+  07 00000940 m_bActive                       
+  08 00000956 m_iFOV                          
+  09 00000944 m_iNextFOV                      
+  10 00000936 m_iStartFOV                     
+  11 00000948 m_flNextFOVBlendTime            
+  12 00000952 m_flFOVBlendStartTime           
+  13 00000960 m_bAlternateFOV                 
+  14 00000976 m_flFadeAlpha                   
+  15 00000964 m_flFadeColor                   
+  16 00000000 m_flFadeColor                   
+  17 00000980 m_flFadeDuration                
+  18 00000984 m_hCameraEntity                 
+
+- - - - - 0127 CShadowControl                   - - - - -
+  00 00000872 m_shadowDirection               
+  01 00000884 m_shadowColor                   
+  02 00000888 m_flShadowMaxDist               
+  03 00000892 m_bDisableShadows               
+
+- - - - - 0128 CSlideshowDisplay                - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_bEnabled                      
+  02 00000873 m_szDisplayText                 
+  03 00001001 m_szSlideshowDirectory          
+  04 00001156 m_chCurrentSlideLists           
+  05 00001172 m_fMinSlideTime                 
+  06 00001176 m_fMaxSlideTime                 
+  07 00001180 m_iCycleType                    
+  08 00001184 m_bNoListRepeats                
+
+- - - - - 0129 CSmokeStack                      - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_SpreadSpeed                   
+  02 00000876 m_Speed                         
+  03 00000880 m_StartSize                     
+  04 00000884 m_EndSize                       
+  05 00000888 m_Rate                          
+  06 00000892 m_JetLength                     
+  07 00000900 m_bEmit                         
+  08 00000904 m_flBaseSpread                  
+  09 00000896 m_flRollSpeed                   
+  10 00000944 m_DirLight.m_vPos               
+  11 00000956 m_DirLight.m_vColor             
+  12 00000968 m_DirLight.m_flIntensity        
+  13 00000912 m_AmbientLight.m_vPos           
+  14 00000924 m_AmbientLight.m_vColor         
+  15 00000936 m_AmbientLight.m_flIntensity    
+  16 00000992 m_vWind                         
+  17 00000972 m_flTwist                       
+  18 00000980 m_iMaterialModel                
+
+- - - - - 0130 CSpotlightEnd                    - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_flLightScale                  
+  02 00000876 m_Radius                        
+
+- - - - - 0131 CSprite                          - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_hAttachedToEntity             
+  02 00000876 m_nAttachment                   
+  03 00000904 m_flScaleTime                   
+  04 00000900 m_flSpriteScale                 
+  05 00000912 m_flGlowProxySize               
+  06 00000916 m_flHDRColorScale               
+  07 00000880 m_flSpriteFramerate             
+  08 00000884 m_flFrame                       
+  09 00000896 m_flBrightnessTime              
+  10 00000892 m_nBrightness                   
+  11 00000908 m_bWorldSpaceScale              
+
+- - - - - 0132 CSpriteOriented                  - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0133 CSpriteTrail                     - - - - -
+  00 00000000 baseclass                       
+  01 00000952 m_flLifeTime                    
+  02 00000956 m_flStartWidth                  
+  03 00000960 m_flEndWidth                    
+  04 00000964 m_flStartWidthVariance          
+  05 00000968 m_flTextureRes                  
+  06 00000972 m_flMinFadeLength               
+  07 00000976 m_vecSkyboxOrigin               
+  08 00000988 m_flSkyboxScale                 
+
+- - - - - 0134 CSteamJet                        - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_SpreadSpeed                   
+  02 00000876 m_Speed                         
+  03 00000880 m_StartSize                     
+  04 00000884 m_EndSize                       
+  05 00000888 m_Rate                          
+  06 00000892 m_JetLength                     
+  07 00000896 m_bEmit                         
+  08 00000900 m_bFaceLeft                     
+  09 00000904 m_nType                         
+  10 00000272 m_spawnflags                    
+  11 00000908 m_flRollSpeed                   
+
+- - - - - 0135 CSun                             - - - - -
+  00 00000132 m_clrRender                     
+  01 00000912 m_clrOverlay                    
+  02 00000872 m_vDirection                    
+  03 00000916 m_bOn                           
+  04 00000904 m_nSize                         
+  05 00000908 m_nOverlaySize                  
+  06 00000920 m_nMaterial                     
+  07 00000924 m_nOverlayMaterial              
+  08 00000928 HDRColorScale                   
+
+- - - - - 0136 CSynergyPlayer                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0137 CTeam                            - - - - -
+  00 00000960 m_iTeamNum                      
+  01 00000944 m_iScore                        
+  02 00000948 m_iRoundsWon                    
+  03 00000912 m_szTeamname                    
+  04 00000000 player_array_element            
+  05 00000000 "player_array"                  
+
+- - - - - 0138 CTeamplayRoundBasedRulesProxy    - - - - -
+  00 00000000 baseclass                       
+  01 00000000 teamplayroundbased_gamerules_data
+
+- - - - - 0139 CTeamRoundTimer                  - - - - -
+  00 00000872 m_bTimerPaused                  
+  01 00000876 m_flTimeRemaining               
+  02 00000880 m_flTimerEndTime                
+  03 00000896 m_nTimerMaxLength               
+  04 00000884 m_bIsDisabled                   
+  05 00000885 m_bShowInHUD                    
+  06 00000888 m_nTimerLength                  
+  07 00000892 m_nTimerInitialLength           
+  08 00000900 m_bAutoCountdown                
+  09 00000904 m_nSetupTimeLength              
+  10 00000908 m_nState                        
+  11 00000912 m_bStartPaused                  
+  12 00000913 m_bShowTimeRemaining            
+  13 00000920 m_bStopWatchTimer               
+  14 00000914 m_bInCaptureWatchState          
+  15 00000916 m_flTotalTime                   
+
+- - - - - 0140 CTeamTrainWatcher                - - - - -
+  00 00000000 baseclass                       
+  01 00001128 m_flTotalProgress               
+  02 00001132 m_iTrainSpeedLevel              
+  03 00001144 m_flRecedeTime                  
+  04 00001136 m_nNumCappers                   
+  05 00001248 m_hGlowEnt                      
+
+- - - - - 0141 CTEAntlionDust                   - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_vecOrigin                     
+  02 00000036 m_vecAngles                     
+  03 00000048 m_bBlockedSpawner               
+
+- - - - - 0142 CTEArmorRicochet                 - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0143 CTEBaseBeam                      - - - - -
+  00 00000012 m_nModelIndex                   
+  01 00000016 m_nHaloIndex                    
+  02 00000020 m_nStartFrame                   
+  03 00000024 m_nFrameRate                    
+  04 00000028 m_fLife                         
+  05 00000032 m_fWidth                        
+  06 00000036 m_fEndWidth                     
+  07 00000040 m_nFadeLength                   
+  08 00000044 m_fAmplitude                    
+  09 00000064 m_nSpeed                        
+  10 00000048 r                               
+  11 00000052 g                               
+  12 00000056 b                               
+  13 00000060 a                               
+  14 00000068 m_nFlags                        
+
+- - - - - 0144 CTEBeamEntPoint                  - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_nStartEntity                  
+  02 00000088 m_nEndEntity                    
+  03 00000076 m_vecStartPoint                 
+  04 00000092 m_vecEndPoint                   
+
+- - - - - 0145 CTEBeamEnts                      - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_nStartEntity                  
+  02 00000076 m_nEndEntity                    
+
+- - - - - 0146 CTEBeamFollow                    - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_iEntIndex                     
+
+- - - - - 0147 CTEBeamLaser                     - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_nStartEntity                  
+  02 00000076 m_nEndEntity                    
+
+- - - - - 0148 CTEBeamPoints                    - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_vecStartPoint                 
+  02 00000084 m_vecEndPoint                   
+
+- - - - - 0149 CTEBeamRing                      - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_nStartEntity                  
+  02 00000076 m_nEndEntity                    
+
+- - - - - 0150 CTEBeamRingPoint                 - - - - -
+  00 00000000 baseclass                       
+  01 00000072 m_vecCenter                     
+  02 00000084 m_flStartRadius                 
+  03 00000088 m_flEndRadius                   
+
+- - - - - 0151 CTEBeamSpline                    - - - - -
+  00 00000204 m_nPoints                       
+  01 00000012 m_vecPoints                     
+  02 00000000 m_vecPoints                     
+
+- - - - - 0152 CTEBloodSprite                   - - - - -
+  00 00000012 m_vecOrigin                     
+  01 00000024 m_vecDirection                  
+  02 00000044 r                               
+  03 00000048 g                               
+  04 00000052 b                               
+  05 00000056 a                               
+  06 00000036 m_nSprayModel                   
+  07 00000040 m_nDropModel                    
+  08 00000060 m_nSize                         
+
+- - - - - 0153 CTEBloodStream                   - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_vecDirection                  
+  02 00000036 r                               
+  03 00000040 g                               
+  04 00000044 b                               
+  05 00000048 a                               
+  06 00000052 m_nAmount                       
+
+- - - - - 0154 CTEBreakModel                    - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000048 m_angRotation[0]                
+  03 00000052 m_angRotation[1]                
+  04 00000056 m_angRotation[2]                
+  05 00000024 m_vecSize                       
+  06 00000036 m_vecVelocity                   
+  07 00000064 m_nModelIndex                   
+  08 00000060 m_nRandomization                
+  09 00000068 m_nCount                        
+  10 00000072 m_fTime                         
+  11 00000076 m_nFlags                        
+
+- - - - - 0155 CTEBSPDecal                      - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_nEntity                       
+  03 00000028 m_nIndex                        
+
+- - - - - 0156 CTEBubbles                       - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecMins                       
+  02 00000024 m_vecMaxs                       
+  03 00000040 m_nModelIndex                   
+  04 00000036 m_fHeight                       
+  05 00000044 m_nCount                        
+  06 00000048 m_fSpeed                        
+
+- - - - - 0157 CTEBubbleTrail                   - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecMins                       
+  02 00000024 m_vecMaxs                       
+  03 00000040 m_nModelIndex                   
+  04 00000036 m_flWaterZ                      
+  05 00000044 m_nCount                        
+  06 00000048 m_fSpeed                        
+
+- - - - - 0158 CTEClientProjectile              - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecVelocity                   
+  03 00000036 m_nModelIndex                   
+  04 00000040 m_nLifeTime                     
+  05 00000044 m_hOwner                        
+
+- - - - - 0159 CTEConcussiveExplosion           - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_vecNormal                     
+  02 00000036 m_flScale                       
+  03 00000040 m_nRadius                       
+  04 00000044 m_nMagnitude                    
+
+- - - - - 0160 CTEDecal                         - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecStart                      
+  03 00000036 m_nEntity                       
+  04 00000040 m_nHitbox                       
+  05 00000044 m_nIndex                        
+
+- - - - - 0161 CTEDust                          - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_flSize                        
+  02 00000028 m_flSpeed                       
+  03 00000032 m_vecDirection                  
+
+- - - - - 0162 CTEDynamicLight                  - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000028 r                               
+  03 00000032 g                               
+  04 00000036 b                               
+  05 00000040 exponent                        
+  06 00000024 m_fRadius                       
+  07 00000044 m_fTime                         
+  08 00000048 m_fDecay                        
+
+- - - - - 0163 CTEEffectDispatch                - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_EffectData                    
+
+- - - - - 0164 CTEEnergySplash                  - - - - -
+  00 00000012 m_vecPos                        
+  01 00000024 m_vecDir                        
+  02 00000036 m_bExplosive                    
+
+- - - - - 0165 CTEExplosion                     - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_nModelIndex                   
+  02 00000028 m_fScale                        
+  03 00000032 m_nFrameRate                    
+  04 00000036 m_nFlags                        
+  05 00000040 m_vecNormal                     
+  06 00000052 m_chMaterialType                
+  07 00000056 m_nRadius                       
+  08 00000060 m_nMagnitude                    
+
+- - - - - 0166 CTEFizz                          - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_nEntity                       
+  02 00000016 m_nModelIndex                   
+  03 00000020 m_nDensity                      
+  04 00000024 m_nCurrent                      
+
+- - - - - 0167 CTEFootprintDecal                - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecDirection                  
+  03 00000036 m_nEntity                       
+  04 00000040 m_nIndex                        
+  05 00000044 m_chMaterialType                
+
+- - - - - 0168 CTEGaussExplosion                - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_nType                         
+  02 00000028 m_vecDirection                  
+
+- - - - - 0169 CTEGlowSprite                    - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_nModelIndex                   
+  03 00000028 m_fScale                        
+  04 00000032 m_fLife                         
+  05 00000036 m_nBrightness                   
+
+- - - - - 0170 CTEHL2MPFireBullets              - - - - -
+  00 00000016 m_vecOrigin                     
+  01 00000028 m_vecDir                        
+  02 00000040 m_iAmmoID                       
+  03 00000044 m_iSeed                         
+  04 00000048 m_iShots                        
+  05 00000012 m_iPlayer                       
+  06 00000052 m_flSpread                      
+  07 00000056 m_bDoImpacts                    
+  08 00000057 m_bDoTracers                    
+
+- - - - - 0171 CTEImpact                        - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecNormal                     
+  03 00000036 m_iType                         
+
+- - - - - 0172 CTEKillPlayerAttachments         - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_nPlayer                       
+
+- - - - - 0173 CTELargeFunnel                   - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_nModelIndex                   
+  02 00000028 m_nReversed                     
+
+- - - - - 0174 CTEMetalSparks                   - - - - -
+  00 00000012 m_vecPos                        
+  01 00000024 m_vecDir                        
+
+- - - - - 0175 CTEMuzzleFlash                   - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecAngles                     
+  03 00000036 m_flScale                       
+  04 00000040 m_nType                         
+
+- - - - - 0176 CTEParticleSystem                - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin[0]                  
+  02 00000016 m_vecOrigin[1]                  
+  03 00000020 m_vecOrigin[2]                  
+
+- - - - - 0177 CTEPhysicsProp                   - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_angRotation[0]                
+  03 00000028 m_angRotation[1]                
+  04 00000032 m_angRotation[2]                
+  05 00000036 m_vecVelocity                   
+  06 00000048 m_nModelIndex                   
+  07 00000052 m_nSkin                         
+  08 00000056 m_nFlags                        
+  09 00000060 m_nEffects                      
+
+- - - - - 0178 CTEPlayerAnimEvent               - - - - -
+  00 00000012 m_hPlayer                       
+  01 00000016 m_iEvent                        
+  02 00000020 m_nData                         
+
+- - - - - 0179 CTEPlayerDecal                   - - - - -
+  00 00000000 baseclass                       
+  01 00000016 m_vecOrigin                     
+  02 00000028 m_nEntity                       
+  03 00000012 m_nPlayer                       
+
+- - - - - 0180 CTEProjectedDecal                - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000032 m_angRotation                   
+  03 00000028 m_flDistance                    
+  04 00000024 m_nIndex                        
+
+- - - - - 0181 CTEShatterSurface                - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecAngles                     
+  03 00000036 m_vecForce                      
+  04 00000048 m_vecForcePos                   
+  05 00000060 m_flWidth                       
+  06 00000064 m_flHeight                      
+  07 00000068 m_flShardSize                   
+  08 00000072 m_nSurfaceType                  
+  09 00000076 m_uchFrontColor[0]              
+  10 00000077 m_uchFrontColor[1]              
+  11 00000078 m_uchFrontColor[2]              
+  12 00000079 m_uchBackColor[0]               
+  13 00000080 m_uchBackColor[1]               
+  14 00000081 m_uchBackColor[2]               
+
+- - - - - 0182 CTEShowLine                      - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_vecEnd                        
+
+- - - - - 0183 CTesla                           - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_SoundName                     
+  02 00000924 m_iszSpriteName                 
+
+- - - - - 0184 CTESmoke                         - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_nModelIndex                   
+  03 00000028 m_fScale                        
+  04 00000032 m_nFrameRate                    
+
+- - - - - 0185 CTESparks                        - - - - -
+  00 00000000 baseclass                       
+  01 00000024 m_nMagnitude                    
+  02 00000028 m_nTrailLength                  
+  03 00000032 m_vecDir                        
+
+- - - - - 0186 CTESprite                        - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_nModelIndex                   
+  03 00000028 m_fScale                        
+  04 00000032 m_nBrightness                   
+
+- - - - - 0187 CTESpriteSpray                   - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_vecDirection                  
+  03 00000036 m_nModelIndex                   
+  04 00000044 m_fNoise                        
+  05 00000040 m_nSpeed                        
+  06 00000048 m_nCount                        
+
+- - - - - 0188 CTest_ProxyToggle_Networkable    - - - - -
+  00 00000000 baseclass                       
+  01 00000000 blah                            
+
+- - - - - 0189 CTestTraceline                   - - - - -
+  00 00000132 m_clrRender                     
+  01 00000816 m_vecOrigin                     
+  02 00000828 m_angRotation[0]                
+  03 00000832 m_angRotation[1]                
+  04 00000836 m_angRotation[2]                
+  05 00000336 moveparent                      
+
+- - - - - 0190 CTEWorldDecal                    - - - - -
+  00 00000000 baseclass                       
+  01 00000012 m_vecOrigin                     
+  02 00000024 m_nIndex                        
+
+- - - - - 0191 CTriggerWait                     - - - - -
+  00 00001220 m_nCountType                    
+  01 00001224 m_iPlayerValue                  
+  02 00001228 m_bUseHud                       
+  03 00001236 m_iTouchPlayers                 
+
+- - - - - 0192 CVGuiScreen                      - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_flWidth                       
+  02 00000880 m_flHeight                      
+  03 00000888 m_nAttachmentIndex              
+  04 00000884 m_nPanelName                    
+  05 00000896 m_fScreenFlags                  
+  06 00000892 m_nOverlayMaterial              
+  07 00000900 m_hPlayerOwner                  
+
+- - - - - 0193 CVortigauntChargeToken           - - - - -
+  00 00000000 baseclass                       
+  01 00000880 m_bFadeOut                      
+
+- - - - - 0194 CVortigauntEffectDispel          - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_bFadeOut                      
+
+- - - - - 0195 CVoteController                  - - - - -
+  00 00000000 baseclass                       
+  01 00000872 m_iActiveIssueIndex             
+  02 00000876 m_iOnlyTeamToVote               
+  03 00000880 m_nVoteOptionCount              
+  04 00000900 m_nPotentialVotes               
+  05 00000904 m_bIsYesNoVote                  
+
+- - - - - 0196 CWaterBullet                     - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0197 CWaterLODControl                 - - - - -
+  00 00000872 m_flCheapWaterStartDistance     
+  01 00000876 m_flCheapWaterEndDistance       
+
+- - - - - 0198 CWeapon357                       - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_flAccuracyPenalty             
+
+- - - - - 0199 CWeapon_SLAM                     - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_tSlamState                    
+  02 00001512 m_bDetonatorArmed               
+  03 00001513 m_bNeedDetonatorDraw            
+  04 00001514 m_bNeedDetonatorHolster         
+  05 00001515 m_bNeedReload                   
+  06 00001516 m_bClearReload                  
+  07 00001517 m_bThrowSatchel                 
+  08 00001518 m_bAttachSatchel                
+  09 00001519 m_bAttachTripmine               
+
+- - - - - 0200 CWeaponAlyxGun                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0201 CWeaponAnnabelle                 - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0202 CWeaponAR2                       - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0203 CWeaponBugBait                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0204 CWeaponCitizenPackage            - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0205 CWeaponCitizenSuitcase           - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0206 CWeaponCrossbow                  - - - - -
+  00 00000000 baseclass                       
+  01 00001516 m_bInZoom                       
+  02 00001517 m_bMustReload                   
+
+- - - - - 0207 CWeaponCrowbar                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0208 CWeaponCubemap                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0209 CWeaponCycler                    - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0210 CWeaponDeagle                    - - - - -
+  00 00000000 baseclass                       
+  01 00001516 m_flSoonestPrimaryAttack        
+  02 00001520 m_flLastAttackTime              
+  03 00001524 m_flAccuracyPenalty             
+  04 00001528 m_nNumShotsFired                
+
+- - - - - 0211 CWeaponFrag                      - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_bRedraw                       
+  02 00001516 m_fDrawbackFinished             
+  03 00001512 m_AttackPaused                  
+
+- - - - - 0212 CWeaponHL2MPBase                 - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0213 CWeaponMG1                       - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0214 CWeaponMP5K                      - - - - -
+  00 00000000 baseclass                       
+  01 00001532 m_flShotTime                    
+
+- - - - - 0215 CWeaponOldManHarpoon             - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0216 CWeaponPhysCannon                - - - - -
+  00 00000000 baseclass                       
+  01 00001560 m_bActive                       
+  02 00001536 m_hAttachedObject               
+  03 00001524 m_attachedPositionObjectSpace   
+  04 00001512 m_attachedAnglesPlayerSpace[0]  
+  05 00001516 m_attachedAnglesPlayerSpace[1]  
+  06 00001520 m_attachedAnglesPlayerSpace[2]  
+  07 00001564 m_EffectState                   
+  08 00001568 m_bOpen                         
+  09 00001508 m_bMegaState                    
+
+- - - - - 0217 CWeaponPipe                      - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0218 CWeaponPistol                    - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_flSoonestPrimaryAttack        
+  02 00001512 m_flLastAttackTime              
+  03 00001516 m_flAccuracyPenalty             
+  04 00001520 m_nNumShotsFired                
+
+- - - - - 0219 CWeaponRPG                       - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_bInitialStateUpdate           
+  02 00001509 m_bGuiding                      
+  03 00001510 m_bHideGuiding                  
+  04 00001512 m_hMissile                      
+  05 00001516 m_vecLaserDot                   
+
+- - - - - 0220 CWeaponShotgun                   - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_bNeedPump                     
+  02 00001509 m_bDelayedFire1                 
+  03 00001510 m_bDelayedFire2                 
+  04 00001511 m_bDelayedReload                
+
+- - - - - 0221 CWeaponSMG1                      - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0222 CWeaponStunStick                 - - - - -
+  00 00000000 baseclass                       
+  01 00001508 m_bActive                       
+
+- - - - - 0223 CWorld                           - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_flWaveHeight                  
+  02 00000880 m_WorldMins                     
+  03 00000892 m_WorldMaxs                     
+  04 00000924 m_bStartDark                    
+  05 00000904 m_flMaxOccludeeArea             
+  06 00000908 m_flMinOccluderArea             
+  07 00000916 m_flMaxPropScreenSpaceWidth     
+  08 00000912 m_flMinPropScreenSpaceWidth     
+  09 00000920 m_iszDetailSpriteMaterial       
+  10 00000925 m_bColdWorld                    
+
+- - - - - 0224 DustTrail                        - - - - -
+  00 00000000 baseclass                       
+  01 00000888 m_SpawnRate                     
+  02 00000872 m_Color                         
+  03 00000892 m_ParticleLifetime              
+  04 00000896 m_StopEmitTime                  
+  05 00000900 m_MinSpeed                      
+  06 00000904 m_MaxSpeed                      
+  07 00000920 m_MinDirectedSpeed              
+  08 00000924 m_MaxDirectedSpeed              
+  09 00000908 m_StartSize                     
+  10 00000912 m_EndSize                       
+  11 00000916 m_SpawnRadius                   
+  12 00000928 m_bEmit                         
+  13 00000884 m_Opacity                       
+
+- - - - - 0225 MovieExplosion                   - - - - -
+  00 00000000 baseclass                       
+
+- - - - - 0226 ParticleSmokeGrenade             - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_flSpawnTime                   
+  02 00000880 m_FadeStartTime                 
+  03 00000884 m_FadeEndTime                   
+  04 00000872 m_CurrentStage                  
+
+- - - - - 0227 RocketTrail                      - - - - -
+  00 00000000 baseclass                       
+  01 00000900 m_SpawnRate                     
+  02 00000872 m_StartColor                    
+  03 00000884 m_EndColor                      
+  04 00000904 m_ParticleLifetime              
+  05 00000908 m_StopEmitTime                  
+  06 00000912 m_MinSpeed                      
+  07 00000916 m_MaxSpeed                      
+  08 00000920 m_StartSize                     
+  09 00000924 m_EndSize                       
+  10 00000928 m_SpawnRadius                   
+  11 00000932 m_bEmit                         
+  12 00000936 m_nAttachment                   
+  13 00000896 m_Opacity                       
+  14 00000940 m_bDamaged                      
+  15 00000944 m_flFlareScale                  
+
+- - - - - 0228 SmokeTrail                       - - - - -
+  00 00000000 baseclass                       
+  01 00000900 m_SpawnRate                     
+  02 00000872 m_StartColor                    
+  03 00000884 m_EndColor                      
+  04 00000904 m_ParticleLifetime              
+  05 00000908 m_StopEmitTime                  
+  06 00000912 m_MinSpeed                      
+  07 00000916 m_MaxSpeed                      
+  08 00000932 m_MinDirectedSpeed              
+  09 00000936 m_MaxDirectedSpeed              
+  10 00000920 m_StartSize                     
+  11 00000924 m_EndSize                       
+  12 00000928 m_SpawnRadius                   
+  13 00000940 m_bEmit                         
+  14 00000944 m_nAttachment                   
+  15 00000896 m_Opacity                       
+
+- - - - - 0229 SporeExplosion                   - - - - -
+  00 00000000 baseclass                       
+  01 00000876 m_flSpawnRate                   
+  02 00000880 m_flParticleLifetime            
+  03 00000884 m_flStartSize                   
+  04 00000888 m_flEndSize                     
+  05 00000892 m_flSpawnRadius                 
+  06 00000896 m_bEmit                         
+  07 00000897 m_bDontRemove                   
+
+- - - - - 0230 SporeTrail                       - - - - -
+  00 00000000 baseclass                       
+  01 00000884 m_flSpawnRate                   
+  02 00000872 m_vecEndColor                   
+  03 00000888 m_flParticleLifetime            
+  04 00000892 m_flStartSize                   
+  05 00000896 m_flEndSize                     
+  06 00000900 m_flSpawnRadius                 
+  07 00000904 m_bEmit                         
+
