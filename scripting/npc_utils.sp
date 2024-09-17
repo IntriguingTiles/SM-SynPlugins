@@ -19,6 +19,7 @@ public void OnPluginStart()
 	RegAdminCmd("sm_spawnbarney", SpawnBarney, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnalyx", SpawnAlyx, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnvort", SpawnVort, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_spawnjalopy", SpawnJalopy, ADMFLAG_GENERIC);
 }
 
 public Action TeleMonk(int client, int args)
@@ -226,6 +227,47 @@ public Action SpawnVort(int client, int args)
 	DispatchSpawn(entity);
 
 	ShowActivity2(client, "[SM] ", "Spawned vort %d.", entity);
+
+	return Plugin_Handled;
+}
+
+public Action SpawnJalopy(int client, int args)
+{
+	int entity = CreateEntityByName("prop_vehicle_jeep_episodic");
+
+	if (entity == -1)
+	{
+		ReplyToCommand(client, "[SM] Failed to create entity.");
+		return Plugin_Handled;
+	}
+
+	float vec[3];
+	float ang[3];
+
+	GetClientAbsOrigin(client, vec);
+	GetClientAbsAngles(client, ang);
+
+	DispatchKeyValue(entity, "targetname", "jeep");
+	DispatchKeyValue(entity, "vehiclescript", "scripts/vehicles/jalopy.txt");
+	DispatchKeyValue(entity, "model", "models/vehicle.mdl");
+	DispatchKeyValueVector(entity, "origin", vec);
+	DispatchKeyValueVector(entity, "angles", ang);
+
+	SetVariantString("PlayerOn alyx,SetDamageFilter,alyx_invuln_filter,0,-1");
+	AcceptEntityInput(entity, "AddOutput");
+
+	SetVariantString("PlayerOff alyx,SetDamageFilter,,0,-1");
+	AcceptEntityInput(entity, "AddOutput");
+
+	SetVariantString("PlayerOn alyx,EnterVehicle,jeep,0,-1");
+	AcceptEntityInput(entity, "AddOutput");
+
+	SetVariantString("PlayerOff alyx,ExitVehicle,,0,-1");
+	AcceptEntityInput(entity, "AddOutput");
+
+	DispatchSpawn(entity);
+
+	ShowActivity2(client, "[SM] ", "Spawned jalopy %d.", entity);
 
 	return Plugin_Handled;
 }
