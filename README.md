@@ -15,6 +15,7 @@ You will also need to change SourceMod's hardcoded maxplayer define to `129` if 
 | `antinoclip`        | An attempt to mitigate strange issues relating to players gaining noclip under certain conditions. Obsolete but kept around just in case. |
 | `antitroll`         | Aims to prevent players from disrupting the game. Currently restricts usage of `impulse 50` (squad control) and the EP2 jalopy to admins. |
 | `npc_utils`         | Teleporting and spawning NPCs. Can teleport the jalopy too.                                                                               |
+| `outland_02`        | Provides a way to force ep2_outland_02 to act as if you have returned from ep2_outland_04.                                                |
 | `pmute`             | Automatically mutes previously muted players on level change and rejoin.                                                                  |
 | `sm_crane_driver`   | Tells you the name of the crane driver. Useful if the crane driver doesn't want to do their job.                                          |
 | `sm_ent_create`     | Reimplementation of Source's `ent_create`.                                                                                                |
