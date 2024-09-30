@@ -3,7 +3,7 @@
 	"Teleported target"
 	{
 		"#format"	"{1:t}"
-		"en"	"Teleported {1}."
+		"en"	"teleported {1}."
 	}
 	"Teleported to target"
 	{
@@ -13,6 +13,6 @@
 	"Respawned target"
 	{
 		"#format"	"{1:t}"
-		"en"	"Respawned {1}."
+		"en"	"respawned {1}."
 	}
 }
