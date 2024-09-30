@@ -2,7 +2,7 @@
 #include <sdktools>
 
 Handle g_hGameConf;
-Handle g_hSynergyPlayer_Spawn;
+Handle g_hSpawn;
 
 public Plugin myinfo =
 {
@@ -17,15 +17,15 @@ public void OnPluginStart()
 	RegAdminCmd("sm_respawn", Cmd_Respawn, ADMFLAG_GENERIC);
 	LoadTranslations("common.phrases");
 	LoadTranslations("tiles.phrases");
-	g_hGameConf = LoadGameConfigFile("sm_respawn.synergy");
+	g_hGameConf = LoadGameConfigFile("sdkhooks.games");
 	StartPrepSDKCall(SDKCall_Player);
-	PrepSDKCall_SetFromConf(g_hGameConf, SDKConf_Signature, "SynergyPlayer_Spawn");
-	g_hSynergyPlayer_Spawn = EndPrepSDKCall();
+	PrepSDKCall_SetFromConf(g_hGameConf, SDKConf_Virtual, "Spawn");
+	g_hSpawn = EndPrepSDKCall();
 }
 
 public void RespawnPlayer(int player)
 {
-	SDKCall(g_hSynergyPlayer_Spawn, player);
+	SDKCall(g_hSpawn, player);
 }
 
 public Action Cmd_Respawn(int client, int args)
