@@ -37,7 +37,7 @@ public void OnEntityCreated(int entity, const char[] classname)
 {
 	// LogAction(0, -1, "Entity created: %d %s", entity, classname);
 
-	if (!g_firedRelay && g_isCorrectMap && g_cvOutland02.BoolValue && StrEqual(classname, "player"))
+	if (g_isCorrectMap && !g_firedRelay && g_cvOutland02.BoolValue && StrEqual(classname, "player"))
 	{
 		// level should be ready by now
 
