@@ -10,20 +10,21 @@ You will also need to change SourceMod's hardcoded maxplayer define to `129` if 
 
 ## Plugins
 
-| Plugin              | Description                                                                                                                               |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `antinoclip`        | [OBSOLETE] An attempt to mitigate strange issues relating to players gaining noclip under certain conditions.                             |
-| `antitroll`         | Aims to prevent players from disrupting the game. Currently restricts usage of `impulse 50` (squad control) and the EP2 jalopy to admins. |
-| `npc_utils`         | Teleporting and spawning NPCs (plus the jalopy).                                                                                          |
-| `outland_02`        | Provides a way to force ep2_outland_02 to act as if you have returned from ep2_outland_04.                                                |
-| `pmute`             | Automatically mutes previously muted players on level change and rejoin.                                                                  |
-| `sm_crane_driver`   | Tells you the name of the crane driver. Useful if the crane driver doesn't want to do their job.                                          |
-| `sm_ent_create`     | Reimplementation of Source's `ent_create`.                                                                                                |
-| `sm_ent_fire`       | Partial reimplementation of Source's `ent_fire`. Does not support passing arguments to inputs.                                            |
-| `sm_ent_remove_all` | Partial reimplementation of Source's `ent_remove_all`. Does not support removing by targetname.                                           |
-| `sm_equip`          | [OBSOLETE] An attempt to work around a bug with certain maps spawning players with no weapons.                                            |
-| `sm_givecamera`     | Switches the player controlling a shared camera to you.                                                                                   |
-| `sm_goto`           | Teleports you to the specified player.                                                                                                    |
-| `sm_respawn`        | Respawns either yourself or the specified player(s).                                                                                      |
-| `sm_tele`           | Teleports the specified player(s) to you.                                                                                                 |
-| `sm_telecoords`     | Teleports the specified player(s) to the specified coordinates.                                                                           |
+| Plugin                | Description                                                                                                                               |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `antinoclip`          | [OBSOLETE] An attempt to mitigate strange issues relating to players gaining noclip under certain conditions.                             |
+| `antitroll`           | Aims to prevent players from disrupting the game. Currently restricts usage of `impulse 50` (squad control) and the EP2 jalopy to admins. |
+| `early_reservedslots` | Runs the reserve type 0 logic as soon as possible in the connection process. Requires `reservedslots.smx`.                                |
+| `npc_utils`           | Teleporting and spawning NPCs (plus the jalopy).                                                                                          |
+| `outland_02`          | Provides a way to force ep2_outland_02 to act as if you have returned from ep2_outland_04.                                                |
+| `pmute`               | Automatically mutes previously muted players on level change and rejoin.                                                                  |
+| `sm_crane_driver`     | Tells you the name of the crane driver. Useful if the crane driver doesn't want to do their job.                                          |
+| `sm_ent_create`       | Reimplementation of Source's `ent_create`.                                                                                                |
+| `sm_ent_fire`         | Partial reimplementation of Source's `ent_fire`. Does not support passing arguments to inputs.                                            |
+| `sm_ent_remove_all`   | Partial reimplementation of Source's `ent_remove_all`. Does not support removing by targetname.                                           |
+| `sm_equip`            | [OBSOLETE] An attempt to work around a bug with certain maps spawning players with no weapons.                                            |
+| `sm_givecamera`       | Switches the player controlling a shared camera to you.                                                                                   |
+| `sm_goto`             | Teleports you to the specified player.                                                                                                    |
+| `sm_respawn`          | Respawns either yourself or the specified player(s).                                                                                      |
+| `sm_tele`             | Teleports the specified player(s) to you.                                                                                                 |
+| `sm_telecoords`       | Teleports the specified player(s) to the specified coordinates.                                                                           |
