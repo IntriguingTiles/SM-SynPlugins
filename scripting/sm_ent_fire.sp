@@ -39,7 +39,7 @@ public Action Cmd_EntFire(int client, int args)
 		if (StrEqual(targetname, entity, false))
 		{
 			AcceptEntityInput(ent, input);
-			ShowActivity2(client, "[SM] ", "Fired %s on %s", input, entity);
+			ShowActivity2(client, "[SM] ", "fired %s on %s %d", input, entity, ent);
 			fired = true;
 		}
 	}
@@ -50,14 +50,14 @@ public Action Cmd_EntFire(int client, int args)
 	while (ent != -1)
 	{
 		AcceptEntityInput(ent, input);
-		ShowActivity2(client, "[SM] ", "Fired %s on %s", input, entity);
+		ShowActivity2(client, "[SM] ", "fired %s on %s %d", input, entity, ent);
 		fired = true;
 		ent = FindEntityByClassname(ent, entity);
 	}
 
 	if (!fired)
 	{
-		ReplyToCommand(client, "[SM] No entities found with targetname %s", entity);
+		ReplyToCommand(client, "[SM] No entities found with targetname or classname %s", entity);
 	}
 
 	return Plugin_Handled;

@@ -38,7 +38,7 @@ public Action Cmd_EnableStriderDmg(int client, int args)
 		entity = FindEntityByClassname(entity, "npc_strider");
 	}
 
-	ShowActivity2(client, "[SM] ", "Made striders vulnerable.");
+	ShowActivity2(client, "[SM] ", "made striders vulnerable.");
 	return Plugin_Handled;
 }
 

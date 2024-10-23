@@ -35,7 +35,7 @@ public Action Cmd_Respawn(int client, int args)
 		if (!IsPlayerAlive(client))
 		{
 			RespawnPlayer(client);
-			ShowActivity2(client, "[SM] ", "Respawned %N.", client);
+			ShowActivity2(client, "[SM] ", "respawned %N.", client);
 		}
 		else {
 			ReplyToCommand(client, "[SM] You are not dead");

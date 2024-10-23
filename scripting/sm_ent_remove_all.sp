@@ -30,7 +30,7 @@ public Action Cmd_EntRemoveAll(int client, int args)
 	while (entity != -1)
 	{
 		RemoveEntity(entity);
-		ShowActivity2(client, "[SM] ", "Removed entity %s (%i)", classname, entity);
+		ShowActivity2(client, "[SM] ", "removed entity %s %i", classname, entity);
 		entity = FindEntityByClassname(entity, classname);
 	}
 

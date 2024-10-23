@@ -53,7 +53,7 @@ public Action Cmd_EntCreate(int client, int args)
 
 	DispatchSpawn(entity);
 
-	ShowActivity2(client, "[SM] ", "Spawned %s %d.", classname, entity);
+	ShowActivity2(client, "[SM] ", "spawned %s %d.", classname, entity);
 
 	return Plugin_Handled;
 }

@@ -42,7 +42,7 @@ public Action GiveCamera(int client, int args)
 	}
 
 	SetEntPropEnt(vehicle, Prop_Send, "m_hPlayer", client);
-	ShowActivity2(client, "[SM] ", "Gave camera control to %N.", client);
+	ShowActivity2(client, "[SM] ", "took camera control.");
 
 	return Plugin_Handled;
 }

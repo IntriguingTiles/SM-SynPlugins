@@ -35,7 +35,7 @@ public Action TeleMonk(int client, int args)
 		GetClientAbsAngles(client, ang);
 		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
 
-		ShowActivity2(client, "[SM] ", "Teleported monk %d.", entity);
+		ShowActivity2(client, "[SM] ", "teleported monk %d.", entity);
 
 		entity = FindEntityByClassname(entity, "npc_monk");
 	}
@@ -56,7 +56,7 @@ public Action TeleVort(int client, int args)
 		GetClientAbsAngles(client, ang);
 		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
 
-		ShowActivity2(client, "[SM] ", "Teleported vort %d.", entity);
+		ShowActivity2(client, "[SM] ", "teleported vort %d.", entity);
 
 		entity = FindEntityByClassname(entity, "npc_vortigaunt");
 	}
@@ -77,7 +77,7 @@ public Action TeleAlyx(int client, int args)
 		GetClientAbsAngles(client, ang);
 		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
 
-		ShowActivity2(client, "[SM] ", "Teleported alyx %d.", entity);
+		ShowActivity2(client, "[SM] ", "teleported alyx %d.", entity);
 
 		entity = FindEntityByClassname(entity, "npc_alyx");
 	}
@@ -98,7 +98,7 @@ public Action TeleBarney(int client, int args)
 		GetClientAbsAngles(client, ang);
 		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
 
-		ShowActivity2(client, "[SM] ", "Teleported barney %d.", entity);
+		ShowActivity2(client, "[SM] ", "teleported barney %d.", entity);
 
 		entity = FindEntityByClassname(entity, "npc_barney");
 	}
@@ -128,7 +128,7 @@ public Action TeleJalopy(int client, int args)
 		GetClientAbsAngles(client, ang);
 		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
 
-		ShowActivity2(client, "[SM] ", "Teleported jalopy %d.", entity);
+		ShowActivity2(client, "[SM] ", "teleported jalopy %d.", entity);
 
 		entity = FindEntityByClassname(entity, "prop_vehicle_jeep_episodic");
 	}
@@ -165,7 +165,7 @@ public Action SpawnBarney(int client, int args)
 
 	DispatchSpawn(entity);
 
-	ShowActivity2(client, "[SM] ", "Spawned barney %d.", entity);
+	ShowActivity2(client, "[SM] ", "spawned barney %d.", entity);
 
 	return Plugin_Handled;
 }
@@ -199,7 +199,7 @@ public Action SpawnAlyx(int client, int args)
 
 	DispatchSpawn(entity);
 
-	ShowActivity2(client, "[SM] ", "Spawned alyx %d.", entity);
+	ShowActivity2(client, "[SM] ", "spawned alyx %d.", entity);
 
 	return Plugin_Handled;
 }
@@ -226,7 +226,7 @@ public Action SpawnVort(int client, int args)
 
 	DispatchSpawn(entity);
 
-	ShowActivity2(client, "[SM] ", "Spawned vort %d.", entity);
+	ShowActivity2(client, "[SM] ", "spawned vort %d.", entity);
 
 	return Plugin_Handled;
 }
@@ -267,7 +267,7 @@ public Action SpawnJalopy(int client, int args)
 
 	DispatchSpawn(entity);
 
-	ShowActivity2(client, "[SM] ", "Spawned jalopy %d.", entity);
+	ShowActivity2(client, "[SM] ", "spawned jalopy %d.", entity);
 
 	return Plugin_Handled;
 }
