@@ -144,7 +144,7 @@
 			}
 			"EyeAngles"
 			{
-				"windows"	"131"
+				"windows"	"132"
 				"linux"		"132"
 				"mac"		"132"
 			}
