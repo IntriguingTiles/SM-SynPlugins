@@ -20,7 +20,7 @@ You will also need to change SourceMod's hardcoded maxplayer define to `129` if 
 | `pmute`               | Automatically mutes previously muted players on level change and rejoin.                                                                  |
 | `sm_crane_driver`     | Tells you the name of the crane driver. Useful if the crane driver doesn't want to do their job.                                          |
 | `sm_ent_create`       | Reimplementation of Source's `ent_create`.                                                                                                |
-| `sm_ent_fire`         | Partial reimplementation of Source's `ent_fire`. Does not support passing arguments to inputs.                                            |
+| `sm_ent_fire`         | Reimplementation of Source's `ent_fire`.                                                                                                  |
 | `sm_ent_remove_all`   | Partial reimplementation of Source's `ent_remove_all`. Does not support removing by targetname.                                           |
 | `sm_equip`            | [OBSOLETE] An attempt to work around a bug with certain maps spawning players with no weapons.                                            |
 | `sm_givecamera`       | Switches the player controlling a shared camera to you.                                                                                   |

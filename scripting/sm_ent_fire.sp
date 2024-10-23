@@ -22,9 +22,16 @@ public Action Cmd_EntFire(int client, int args)
 		return Plugin_Handled;
 	}
 
-	char entity[65], input[65];
+	char entity[65], input[65], entArgs[65];
+	bool hasArgs = false;
 	GetCmdArg(1, entity, sizeof(entity));
 	GetCmdArg(2, input, sizeof(input));
+
+	if (args >= 3)
+	{
+		GetCmdArg(3, entArgs, sizeof(entArgs));
+		hasArgs = true;
+	}
 
 	int maxEnts = GetMaxEntities() * 2;
 	bool fired = false;
@@ -38,6 +45,7 @@ public Action Cmd_EntFire(int client, int args)
 
 		if (StrEqual(targetname, entity, false))
 		{
+			if (hasArgs) SetVariantString(entArgs);
 			AcceptEntityInput(ent, input);
 			ShowActivity2(client, "[SM] ", "fired %s on %s %d", input, entity, ent);
 			fired = true;
@@ -49,6 +57,7 @@ public Action Cmd_EntFire(int client, int args)
 
 	while (ent != -1)
 	{
+		if (hasArgs) SetVariantString(entArgs);
 		AcceptEntityInput(ent, input);
 		ShowActivity2(client, "[SM] ", "fired %s on %s %d", input, entity, ent);
 		fired = true;
