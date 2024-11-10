@@ -1,0 +1,17 @@
+"Games"
+{
+    "synergy"
+    {
+        "Signatures"
+        {
+            "StartLagCompensation"
+            {
+                "windows" "\x55\x89\xE5\x53\x57\x56\x81\xEC\xC0\x00\x00\x00\x89\x65\xE4"
+            }
+            "FinishLagCompensation"
+            {
+                "windows" "\x55\x89\xE5\x53\x57\x56\x81\xEC\xB8\x00\x00\x00\x89\xCA"
+            }
+        }
+    }
+}
