@@ -8,7 +8,7 @@ Handle g_hGagCookie;
 
 public Plugin myinfo =
 {
-	name = "pmute",
+	name = "Persistent Mutes",
 	author = "IntriguingTiles",
 	description = "Persistently mutes/gags players.",
 	version = "1.0"

@@ -2,7 +2,7 @@
 
 public Plugin myinfo =
 {
-	name = "early_reservedslots",
+	name = "Early Reserved Slots",
 	author = "IntriguingTiles",
 	description = "Runs the reserved slot logic as soon as possible during the connection process.",
 	version = "1.0",
@@ -38,7 +38,7 @@ public bool OnClientConnect(int client, char[] rejectmsg, int maxlen)
 
 		if (reserved > 0)
 		{
-			LogAction(0, client, "Steam2: %s", steam2);
+			// LogAction(0, client, "Steam2: %s", steam2);
 			AdminId id = FindAdminByIdentity(AUTHMETHOD_STEAM, steam2);
 			int clients = GetClientCount(false);
 			int limit = GetMaxHumanPlayers() - reserved;

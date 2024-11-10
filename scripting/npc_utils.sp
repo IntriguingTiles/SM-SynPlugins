@@ -3,7 +3,7 @@
 
 public Plugin myinfo =
 {
-	name = "npc_utils",
+	name = "NPC Utils",
 	author = "IntriguingTiles",
 	description = "Various NPC commands for Synergy.",
 	version = "1.0"
