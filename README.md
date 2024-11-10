@@ -10,23 +10,24 @@ You will also need to change SourceMod's hardcoded maxplayer define to `129` if 
 
 ## Plugins
 
-| Plugin                | Description                                                                                                                               |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `antinoclip`          | [OBSOLETE] An attempt to mitigate strange issues relating to players gaining noclip under certain conditions.                             |
-| `antitroll`           | Aims to prevent players from disrupting the game. Currently restricts usage of `impulse 50` (squad control) and the EP2 jalopy to admins. |
-| `early_reservedslots` | Runs the reserve type 0 logic as soon as possible in the connection process. Requires `reservedslots.smx`.                                |
-| `invincible_striders` | Makes striders invincible on d3_c17_13 and ep1_c17_06 until an admin runs `sm_enable_strider_dmg`.                                        |
-| `npc_utils`           | Teleporting and spawning NPCs (plus the jalopy).                                                                                          |
-| `outland_02`          | Provides a way to force ep2_outland_02 to act as if you have returned from ep2_outland_04.                                                |
-| `pmute`               | Automatically mutes previously muted players on level change and rejoin.                                                                  |
-| `sm_crane_driver`     | Tells you the name of the crane driver. Useful if the crane driver doesn't want to do their job.                                          |
-| `sm_ent_create`       | Reimplementation of Source's `ent_create`.                                                                                                |
-| `sm_ent_fire`         | Reimplementation of Source's `ent_fire`.                                                                                                  |
-| `sm_ent_remove_all`   | Partial reimplementation of Source's `ent_remove_all`. Does not support removing by targetname.                                           |
-| `sm_equip`            | [OBSOLETE] An attempt to work around a bug with certain maps spawning players with no weapons.                                            |
-| `sm_givecamera`       | Switches the player controlling a shared camera to you.                                                                                   |
-| `sm_goto`             | Teleports you to the specified player.                                                                                                    |
-| `sm_respawn`          | Respawns either yourself or the specified player(s).                                                                                      |
-| `sm_tele`             | Teleports the specified player(s) to you.                                                                                                 |
-| `sm_telecoords`       | Teleports the specified player(s) to the specified coordinates.                                                                           |
-| `sm_wholook`          | Tells you the name of the player you're looking at.                                                                                       |
+| Plugin                         | Description                                                                                                                               |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `antinoclip`                   | [OBSOLETE] An attempt to mitigate strange issues relating to players gaining noclip under certain conditions.                             |
+| `antitroll`                    | Aims to prevent players from disrupting the game. Currently restricts usage of `impulse 50` (squad control) and the EP2 jalopy to admins. |
+| `disable_d3_c17_10b_lasers.sp` | Automatically disables the laser puzzle in d3_17_10b.                                                                                     |
+| `early_reservedslots`          | Runs the reserve type 0 logic as soon as possible in the connection process. Requires `reservedslots.smx`.                                |
+| `invincible_striders`          | Makes striders invincible on d3_c17_13 and ep1_c17_06 until an admin runs `sm_enable_strider_dmg`.                                        |
+| `npc_utils`                    | Teleporting and spawning NPCs (plus the jalopy).                                                                                          |
+| `outland_02`                   | Provides a way to force ep2_outland_02 to act as if you have returned from ep2_outland_04.                                                |
+| `pmute`                        | Automatically mutes previously muted players on level change and rejoin.                                                                  |
+| `sm_crane_driver`              | Tells you the name of the crane driver. Useful if the crane driver doesn't want to do their job.                                          |
+| `sm_ent_create`                | Reimplementation of Source's `ent_create`.                                                                                                |
+| `sm_ent_fire`                  | Reimplementation of Source's `ent_fire`.                                                                                                  |
+| `sm_ent_remove_all`            | Partial reimplementation of Source's `ent_remove_all`. Does not support removing by targetname.                                           |
+| `sm_equip`                     | [OBSOLETE] An attempt to work around a bug with certain maps spawning players with no weapons.                                            |
+| `sm_givecamera`                | Switches the player controlling a shared camera to you.                                                                                   |
+| `sm_goto`                      | Teleports you to the specified player.                                                                                                    |
+| `sm_respawn`                   | Respawns either yourself or the specified player(s).                                                                                      |
+| `sm_tele`                      | Teleports the specified player(s) to you.                                                                                                 |
+| `sm_telecoords`                | Teleports the specified player(s) to the specified coordinates.                                                                           |
+| `sm_wholook`                   | Tells you the name of the player you're looking at.                                                                                       |
