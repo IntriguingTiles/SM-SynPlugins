@@ -17,7 +17,6 @@ You will also need to change SourceMod's hardcoded maxplayer define to `129` if 
 | `disable_d3_c17_10b_lasers` | Automatically disables the laser puzzle in d3_17_10b.                                                                                     |
 | `early_reservedslots`       | Runs the reserve type 0 logic as soon as possible in the connection process. Requires `reservedslots.smx`.                                |
 | `invincible_striders`       | Makes striders invincible on d3_c17_13 and ep1_c17_06 until an admin runs `sm_enable_strider_dmg`.                                        |
-| `lagcomp_guard`             | Ensures that the lag compensation functions are never called while there's an existing lag compensation session.                          |
 | `npc_utils`                 | Teleporting and spawning NPCs (plus the jalopy).                                                                                          |
 | `outland_02`                | Provides a way to force ep2_outland_02 to act as if you have returned from ep2_outland_04.                                                |
 | `pmute`                     | Automatically mutes previously muted players on level change and rejoin.                                                                  |
