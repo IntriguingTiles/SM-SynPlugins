@@ -1,1 +1,1 @@
-del D:\Dev\alliedmodders\customplugins\plugins\*.smx
+del ..\plugins\*.smx
