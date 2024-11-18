@@ -24,7 +24,6 @@ You will also need to change SourceMod's hardcoded maxplayer define to `129` if 
 | `sm_ent_create`             | Reimplementation of Source's `ent_create`.                                                                                                |
 | `sm_ent_fire`               | Reimplementation of Source's `ent_fire`.                                                                                                  |
 | `sm_ent_remove_all`         | Partial reimplementation of Source's `ent_remove_all`. Does not support removing by targetname.                                           |
-| `sm_equip`                  | [OBSOLETE] An attempt to work around a bug with certain maps spawning players with no weapons.                                            |
 | `sm_givecamera`             | Switches the player controlling a shared camera to you.                                                                                   |
 | `sm_goto`                   | Teleports you to the specified player.                                                                                                    |
 | `sm_respawn`                | Respawns either yourself or the specified player(s).                                                                                      |
