@@ -48,7 +48,7 @@ public Action OnJalopyUse(int entity, int activator, int caller, UseType type, f
 
 	if (!GetAdminFlag(GetUserAdmin(activator), Admin_Generic))
 	{
-		LogAction(0, activator, "Blocked jalopy use from \"%L\"", activator);
+		// LogAction(0, activator, "Blocked jalopy use from \"%L\"", activator);
 		return Plugin_Handled;
 	}
 
