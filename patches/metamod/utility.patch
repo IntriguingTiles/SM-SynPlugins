@@ -1,0 +1,13 @@
+diff --git a/loader/utility.cpp b/loader/utility.cpp
+index d70cddd..908e16f 100644
+--- a/loader/utility.cpp
++++ b/loader/utility.cpp
+@@ -439,7 +439,7 @@ mm_GetLibraryInfo(const void *libPtr, DynLibInfo &lib)
+ 	}
+ 
+ 	/* Finally, we can do this */
+-	lib.memorySize = opt->SizeOfImage;
++	lib.memorySize = opt->SizeOfCode + opt->SizeOfInitializedData + opt->SizeOfUninitializedData;
+ 
+ #elif defined __linux__
+ 

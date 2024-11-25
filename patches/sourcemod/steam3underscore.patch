@@ -1,0 +1,13 @@
+diff --git a/core/PlayerManager.cpp b/core/PlayerManager.cpp
+index 3a5c1932..5fef540f 100644
+--- a/core/PlayerManager.cpp
++++ b/core/PlayerManager.cpp
+@@ -1625,7 +1625,7 @@ void PlayerManager::ProcessCommandTarget(cmd_target_info_t *info)
+ 		{
+ 			steamIdType = 2;
+ 		}
+-		else if (strncmp(&info->pattern[1], "[U:", 3) == 0)
++		else if (strncmp(&info->pattern[1], "[U:", 3) == 0 || strncmp(&info->pattern[1], "[U_", 3) == 0)
+ 		{
+ 			steamIdType = 3;
+ 		}

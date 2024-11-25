@@ -1,0 +1,39 @@
+diff --git a/core/logic/MemoryUtils.cpp b/core/logic/MemoryUtils.cpp
+index 62a236be..2236cee2 100644
+--- a/core/logic/MemoryUtils.cpp
++++ b/core/logic/MemoryUtils.cpp
+@@ -497,7 +497,7 @@ const DynLibInfo *MemoryUtils::GetLibraryInfo(const void *libPtr)
+ 	}
+ 
+ 	/* Finally, we can do this */
+-	lib.memorySize = opt->SizeOfImage;
++	lib.memorySize = opt->SizeOfCode + opt->SizeOfInitializedData + opt->SizeOfUninitializedData;
+ 
+ #elif defined PLATFORM_LINUX
+ 
+diff --git a/tools/gdc-psyfork/MemoryUtils.cpp b/tools/gdc-psyfork/MemoryUtils.cpp
+index f11caa04..f0c3871f 100644
+--- a/tools/gdc-psyfork/MemoryUtils.cpp
++++ b/tools/gdc-psyfork/MemoryUtils.cpp
+@@ -533,7 +533,7 @@ bool MemoryUtils::GetLibraryInfo(const void *libPtr, DynLibInfo &lib)
+ 	}
+ 
+ 	/* Finally, we can do this */
+-	lib.memorySize = opt->SizeOfImage;
++	lib.memorySize = opt->SizeOfCode + opt->SizeOfInitializedData + opt->SizeOfUninitializedData;
+ 
+ #elif defined PLATFORM_LINUX
+ 
+diff --git a/tools/gdc/MemoryUtils.cpp b/tools/gdc/MemoryUtils.cpp
+index 0bb83c2b..ffca43c2 100644
+--- a/tools/gdc/MemoryUtils.cpp
++++ b/tools/gdc/MemoryUtils.cpp
+@@ -460,7 +460,7 @@ bool MemoryUtils::GetLibraryInfo(const void *libPtr, DynLibInfo &lib)
+ 	}
+ 
+ 	/* Finally, we can do this */
+-	lib.memorySize = opt->SizeOfImage;
++	lib.memorySize = opt->SizeOfCode + opt->SizeOfInitializedData + opt->SizeOfUninitializedData;
+ 
+ #elif defined PLATFORM_LINUX
+ 
