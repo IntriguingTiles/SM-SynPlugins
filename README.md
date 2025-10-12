@@ -2,12 +2,6 @@
 
 A collection of SourceMod plugins for Synergy focused on making server administration much easier. Some of them are generic enough to be used with other games.
 
-These are intended for use with the `development` beta branch of Synergy but most of them should work for older versions too.
-
-Currently, upstream SourceMod and Metamod:Source do not properly support Synergy's slightly strange `development` binaries, so you will need to patch both projects in order for them to interact with Synergy's binaries without crashing.
-
-You will also need to change SourceMod's hardcoded maxplayer define to `129` if you intend to run a server with >100 maxplayers.
-
 ## Plugins
 
 | Plugin                      | Description                                                                                                                               |
