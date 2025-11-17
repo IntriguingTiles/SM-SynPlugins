@@ -20,11 +20,15 @@ public void OnPluginStart()
 	RegAdminCmd("sm_spawnalyx", SpawnAlyx, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnvort", SpawnVort, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnjalopy", SpawnJalopy, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_gotomonk", GotoMonk, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_gotovort", GotoVort, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_gotoalyx", GotoAlyx, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_gotobarney", GotoBarney, ADMFLAG_GENERIC);
 }
 
-public Action TeleMonk(int client, int args)
+public void TeleEntity(const char[] classname, int client)
 {
-	int entity = FindEntityByClassname(-1, "npc_monk");
+	int entity = FindEntityByClassname(-1, classname);
 
 	while (entity != -1)
 	{
@@ -35,74 +39,33 @@ public Action TeleMonk(int client, int args)
 		GetClientAbsAngles(client, ang);
 		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
 
-		ShowActivity2(client, "[SM] ", "teleported monk %d.", entity);
+		ShowActivity2(client, "[SM] ", "teleported %s %d.", classname, entity);
 
-		entity = FindEntityByClassname(entity, "npc_monk");
+		entity = FindEntityByClassname(entity, classname);
 	}
+}
 
+public Action TeleMonk(int client, int args)
+{
+	TeleEntity("npc_monk", client);
 	return Plugin_Handled;
 }
 
 public Action TeleVort(int client, int args)
 {
-	int entity = FindEntityByClassname(-1, "npc_vortigaunt");
-
-	while (entity != -1)
-	{
-		float vec[3];
-		float ang[3];
-
-		GetClientAbsOrigin(client, vec);
-		GetClientAbsAngles(client, ang);
-		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
-
-		ShowActivity2(client, "[SM] ", "teleported vort %d.", entity);
-
-		entity = FindEntityByClassname(entity, "npc_vortigaunt");
-	}
-
+	TeleEntity("npc_vortigaunt", client);
 	return Plugin_Handled;
 }
 
 public Action TeleAlyx(int client, int args)
 {
-	int entity = FindEntityByClassname(-1, "npc_alyx");
-
-	while (entity != -1)
-	{
-		float vec[3];
-		float ang[3];
-
-		GetClientAbsOrigin(client, vec);
-		GetClientAbsAngles(client, ang);
-		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
-
-		ShowActivity2(client, "[SM] ", "teleported alyx %d.", entity);
-
-		entity = FindEntityByClassname(entity, "npc_alyx");
-	}
-
+	TeleEntity("npc_alyx", client);
 	return Plugin_Handled;
 }
 
 public Action TeleBarney(int client, int args)
 {
-	int entity = FindEntityByClassname(-1, "npc_barney");
-
-	while (entity != -1)
-	{
-		float vec[3];
-		float ang[3];
-
-		GetClientAbsOrigin(client, vec);
-		GetClientAbsAngles(client, ang);
-		TeleportEntity(entity, vec, ang, { 0.0, 0.0, 0.0 });
-
-		ShowActivity2(client, "[SM] ", "teleported barney %d.", entity);
-
-		entity = FindEntityByClassname(entity, "npc_barney");
-	}
-
+	TeleEntity("npc_barney", client);
 	return Plugin_Handled;
 }
 
@@ -136,14 +99,14 @@ public Action TeleJalopy(int client, int args)
 	return Plugin_Handled;
 }
 
-public Action SpawnBarney(int client, int args)
+public void SpawnEntity(const char[] classname, const char[] targetname, bool acceptsEquipment, int client, int args)
 {
-	int entity = CreateEntityByName("npc_barney");
+	int entity = CreateEntityByName(classname);
 
 	if (entity == -1)
 	{
 		ReplyToCommand(client, "[SM] Failed to create entity.");
-		return Plugin_Handled;
+		return;
 	}
 
 	float vec[3];
@@ -152,11 +115,11 @@ public Action SpawnBarney(int client, int args)
 	GetClientAbsOrigin(client, vec);
 	GetClientAbsAngles(client, ang);
 
-	DispatchKeyValue(entity, "targetname", "barney");
+	DispatchKeyValue(entity, "targetname", targetname);
 	DispatchKeyValueVector(entity, "origin", vec);
 	DispatchKeyValueVector(entity, "angles", ang);
 
-	if (args > 0)
+	if (acceptsEquipment && args > 0)
 	{
 		char weapon[65];
 		GetCmdArg(1, weapon, sizeof(weapon));
@@ -165,69 +128,24 @@ public Action SpawnBarney(int client, int args)
 
 	DispatchSpawn(entity);
 
-	ShowActivity2(client, "[SM] ", "spawned barney %d.", entity);
+	ShowActivity2(client, "[SM] ", "spawned %s %d.", targetname, entity);
+}
 
+public Action SpawnBarney(int client, int args)
+{
+	SpawnEntity("npc_barney", "barney", true, client, args);
 	return Plugin_Handled;
 }
 
 public Action SpawnAlyx(int client, int args)
 {
-	int entity = CreateEntityByName("npc_alyx");
-
-	if (entity == -1)
-	{
-		ReplyToCommand(client, "[SM] Failed to create entity.");
-		return Plugin_Handled;
-	}
-
-	float vec[3];
-	float ang[3];
-
-	GetClientAbsOrigin(client, vec);
-	GetClientAbsAngles(client, ang);
-
-	DispatchKeyValue(entity, "targetname", "alyx");
-	DispatchKeyValueVector(entity, "origin", vec);
-	DispatchKeyValueVector(entity, "angles", ang);
-
-	if (args > 0)
-	{
-		char weapon[65];
-		GetCmdArg(1, weapon, sizeof(weapon));
-		DispatchKeyValue(entity, "additionalequipment", weapon);
-	}
-
-	DispatchSpawn(entity);
-
-	ShowActivity2(client, "[SM] ", "spawned alyx %d.", entity);
-
+	SpawnEntity("npc_alyx", "alyx", true, client, args);
 	return Plugin_Handled;
 }
 
 public Action SpawnVort(int client, int args)
 {
-	int entity = CreateEntityByName("npc_vortigaunt");
-
-	if (entity == -1)
-	{
-		ReplyToCommand(client, "[SM] Failed to create entity.");
-		return Plugin_Handled;
-	}
-
-	float vec[3];
-	float ang[3];
-
-	GetClientAbsOrigin(client, vec);
-	GetClientAbsAngles(client, ang);
-
-	DispatchKeyValue(entity, "targetname", "vort");
-	DispatchKeyValueVector(entity, "origin", vec);
-	DispatchKeyValueVector(entity, "angles", ang);
-
-	DispatchSpawn(entity);
-
-	ShowActivity2(client, "[SM] ", "spawned vort %d.", entity);
-
+	SpawnEntity("npc_vortigaunt", "vort", false, client, args);
 	return Plugin_Handled;
 }
 
@@ -269,5 +187,47 @@ public Action SpawnJalopy(int client, int args)
 
 	ShowActivity2(client, "[SM] ", "spawned jalopy %d.", entity);
 
+	return Plugin_Handled;
+}
+
+public void GotoEntity(const char[] classname, int client)
+{
+	int entity = FindEntityByClassname(-1, classname);
+
+	while (entity != -1)
+	{
+		float vec[3];
+
+		GetEntPropVector(entity, Prop_Send, "m_vecOrigin", vec);
+		TeleportEntity(client, vec, NULL_VECTOR, { 0.0, 0.0, 0.0 });
+
+		ShowActivity2(client, "[SM] ", "teleported to %s %d.", classname, entity);
+
+		entity = FindEntityByClassname(entity, classname);
+		break;
+	}
+}
+
+public Action GotoMonk(int client, int args)
+{
+	GotoEntity("npc_monk", client);
+	return Plugin_Handled;
+}
+
+public Action GotoVort(int client, int args)
+{
+	GotoEntity("npc_vortigaunt", client);
+	return Plugin_Handled;
+}
+
+public Action GotoAlyx(int client, int args)
+{
+	GotoEntity("npc_alyx", client);
+	return Plugin_Handled;
+}
+
+public Action GotoBarney(int client, int args)
+{
+	GotoEntity("npc_barney", client);
 	return Plugin_Handled;
 }
