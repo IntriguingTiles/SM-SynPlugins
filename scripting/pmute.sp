@@ -1,5 +1,4 @@
 #include <sourcemod>
-#include <sdktools>
 #include <clientprefs>
 #include <basecomm>
 
