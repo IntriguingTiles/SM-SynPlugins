@@ -7,7 +7,7 @@ index d88262f1..4d4711d4 100644
   */
  
 -#define MAXPLAYERS      101  /**< Maximum number of players SourceMod supports */
-+#define MAXPLAYERS      129  /**< Maximum number of players SourceMod supports */
++#define MAXPLAYERS      256  /**< Maximum number of players SourceMod supports */
  #define MAX_NAME_LENGTH 128 /**< Maximum buffer required to store a client name */
  #define MAX_AUTHID_LENGTH 64 /**< Maximum buffer required to store any AuthID type */
  
@@ -20,7 +20,7 @@ index edb0dc57..d7123773 100644
  #define SM_REPLY_CHAT		1			/**< Reply to chat. */
  
 -#define SM_MAXPLAYERS				101		/**< Maxplayer Count */
-+#define SM_MAXPLAYERS				129		/**< Maxplayer Count */
++#define SM_MAXPLAYERS				256		/**< Maxplayer Count */
  
  namespace SourceMod
  {
