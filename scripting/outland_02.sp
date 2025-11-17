@@ -11,61 +11,66 @@ public Plugin myinfo =
 };
 
 ConVar g_cvOutland02;
-bool g_firedRelay = false;
-bool g_isCorrectMap = false;
+ConVar g_cvOutland02Delay;
 
 public void OnPluginStart()
 {
 	g_cvOutland02 = CreateConVar("sm_outland02", "0", "Force ep2_outland_02 to start as if you came back from ep2_outland_04.");
+	g_cvOutland02Delay = CreateConVar("sm_outland02_delay", "3.0", "The delay before firing the debug relay to begin the return sequence.");
 }
 
 public void OnMapStart()
 {
-	g_firedRelay = false;
-	g_isCorrectMap = false;
-
 	char mapName[65];
 	GetCurrentMap(mapName, sizeof(mapName));
 
-	if (StrEqual(mapName, "ep2_outland_02", false))
+	if (StrEqual(mapName, "ep2_outland_02", false) && g_cvOutland02.BoolValue)
 	{
-		g_isCorrectMap = true;
+		HookEvent("player_spawn", OnPlayerSpawn);
 	}
 }
 
-public void OnEntityCreated(int entity, const char[] classname)
+void OnPlayerSpawn(Event event, const char[] name, bool dontBroadcast)
 {
-	// LogAction(0, -1, "Entity created: %d %s", entity, classname);
+	int maxEnts = GetMaxEntities() * 2;
 
-	if (g_isCorrectMap && !g_firedRelay && g_cvOutland02.BoolValue && StrEqual(classname, "player"))
+	for (int ent = 0; ent < maxEnts; ent++)
 	{
-		// level should be ready by now
+		if (!IsValidEntity(ent)) continue;
 
-		// trigger debug_choreo_start_in_elevator
+		char targetname[128];
+		GetEntPropString(ent, Prop_Data, "m_iName", targetname, sizeof(targetname));
 
-		int maxEnts = GetMaxEntities() * 2;
-
-		for (int ent = 0; ent < maxEnts; ent++)
+		if (StrEqual(targetname, "syn_spawn_manager", false))
 		{
-			if (!IsValidEntity(ent)) continue;
+			// set checkpoint so players can't mess up the map
+			SetVariantString("syn_spawn_player_3");
+			AcceptEntityInput(ent, "SetCheckPoint");
+			LogAction(0, -1, "Fired SetCheckPoint on syn_spawn_manager");
+			
+			AcceptEntityInput(ent, "MovePlayers");
+		}
+	}
 
-			char targetname[128];
-			GetEntPropString(ent, Prop_Data, "m_iName", targetname, sizeof(targetname));
+	CreateTimer(g_cvOutland02Delay.FloatValue, OnTimer);
+	UnhookEvent("player_spawn", OnPlayerSpawn);
+}
 
-			if (StrEqual(targetname, "syn_spawn_manager", false))
-			{
-				// set checkpoint so players can't mess up the map
-				SetVariantString("syn_spawn_player_3");
-				AcceptEntityInput(ent, "SetCheckPoint");
-				LogAction(0, -1, "Fired SetCheckPoint on syn_spawn_manager");
-			}
+void OnTimer(Handle timer)
+{
+	int maxEnts = GetMaxEntities() * 2;
 
-			if (StrEqual(targetname, "debug_choreo_start_in_elevator", false))
-			{
-				AcceptEntityInput(ent, "Trigger");
-				LogAction(0, -1, "Fired Trigger on debug_choreo_start_in_elevator");
-				g_firedRelay = true;
-			}
+	for (int ent = 0; ent < maxEnts; ent++)
+	{
+		if (!IsValidEntity(ent)) continue;
+
+		char targetname[128];
+		GetEntPropString(ent, Prop_Data, "m_iName", targetname, sizeof(targetname));
+
+		if (StrEqual(targetname, "debug_choreo_start_in_elevator", false))
+		{
+			AcceptEntityInput(ent, "Trigger");
+			LogAction(0, -1, "Fired Trigger on debug_choreo_start_in_elevator");
 		}
 	}
 }
