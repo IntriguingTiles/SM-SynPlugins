@@ -15,15 +15,18 @@ public void OnPluginStart()
 	RegAdminCmd("sm_televort", TeleVort, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_telealyx", TeleAlyx, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_telebarney", TeleBarney, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_teleeli", TeleEli, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_telejalopy", TeleJalopy, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnbarney", SpawnBarney, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnalyx", SpawnAlyx, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnvort", SpawnVort, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_spawneli", SpawnEli, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_spawnjalopy", SpawnJalopy, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_gotomonk", GotoMonk, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_gotovort", GotoVort, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_gotoalyx", GotoAlyx, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_gotobarney", GotoBarney, ADMFLAG_GENERIC);
+	RegAdminCmd("sm_gotoeli", GotoEli, ADMFLAG_GENERIC);
 }
 
 public void TeleEntity(const char[] classname, int client)
@@ -66,6 +69,12 @@ public Action TeleAlyx(int client, int args)
 public Action TeleBarney(int client, int args)
 {
 	TeleEntity("npc_barney", client);
+	return Plugin_Handled;
+}
+
+public Action TeleEli(int client, int args)
+{
+	TeleEntity("npc_eli", client);
 	return Plugin_Handled;
 }
 
@@ -149,6 +158,12 @@ public Action SpawnVort(int client, int args)
 	return Plugin_Handled;
 }
 
+public Action SpawnEli(int client, int args)
+{
+	SpawnEntity("npc_eli", "eli", false, client, args);
+	return Plugin_Handled;
+}
+
 public Action SpawnJalopy(int client, int args)
 {
 	int entity = CreateEntityByName("prop_vehicle_jeep_episodic");
@@ -229,5 +244,11 @@ public Action GotoAlyx(int client, int args)
 public Action GotoBarney(int client, int args)
 {
 	GotoEntity("npc_barney", client);
+	return Plugin_Handled;
+}
+
+public Action GotoEli(int client, int args)
+{
+	GotoEntity("npc_eli", client);
 	return Plugin_Handled;
 }
