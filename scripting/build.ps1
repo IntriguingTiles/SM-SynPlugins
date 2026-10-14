@@ -15,7 +15,7 @@ foreach ($script in Get-ChildItem *.sp) {
     $opts = if ($script.BaseName -eq "crashmap") {""} else {"--require-semicolons"}
 
 
-    & $env:SPCOMP $script.Name -o"$output" -i"$sminc" $opts
+    & $env:SPCOMP $script.Name -o"$output" -i"$sminc" -iinclude $opts
 
     if (!$?) {
         Write-Host -ForegroundColor Red Build failed!
