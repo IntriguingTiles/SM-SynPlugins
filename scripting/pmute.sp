@@ -19,6 +19,8 @@ public void OnPluginStart()
 	g_hGagCookie = RegClientCookie("pgag", "Persistent gag", CookieAccess_Private);
 	RegAdminCmd("sm_is_muted", Cmd_IsMuted, ADMFLAG_CHAT);
 	RegAdminCmd("sm_is_gagged", Cmd_IsGagged, ADMFLAG_CHAT);
+	RegAdminCmd("sm_mute_list", Cmd_MuteList, ADMFLAG_CHAT);
+	RegAdminCmd("sm_gag_list", Cmd_GagList, ADMFLAG_CHAT);
 	LoadTranslations("common.phrases");
 }
 
@@ -159,4 +161,26 @@ public Action Cmd_IsGagged(int client, int args)
 	}
 
 	return Plugin_Handled;
+}
+
+public Action Cmd_MuteList(int client, int args)
+{
+	for (int i = 1; i <= MaxClients; i++)
+	{
+		if (IsClientInGame(i) && AreClientCookiesCached(i) && BaseComm_IsClientMuted(client))
+		{
+			ReplyToCommand(client, "[SM] %N is muted.");
+		}
+	}
+}
+
+public Action Cmd_GagList(int client, int args)
+{
+	for (int i = 1; i <= MaxClients; i++)
+	{
+		if (IsClientInGame(i) && AreClientCookiesCached(i) && BaseComm_IsClientGagged(client))
+		{
+			ReplyToCommand(client, "[SM] %N is gagged.");
+		}
+	}
 }
