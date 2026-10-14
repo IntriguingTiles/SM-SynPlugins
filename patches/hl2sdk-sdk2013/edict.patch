@@ -1,0 +1,13 @@
+diff --git a/public/const.h b/public/const.h
+index 5d7c60b6..17428cd5 100644
+--- a/public/const.h
++++ b/public/const.h
+@@ -62,7 +62,7 @@
+ #define SP_MODEL_INDEX_BITS			13
+ 
+ // How many bits to use to encode an edict.
+-#define	MAX_EDICT_BITS				11			// # of bits needed to represent max edicts
++#define	MAX_EDICT_BITS				13			// # of bits needed to represent max edicts
+ // Max # of edicts in a level
+ #define	MAX_EDICTS					(1<<MAX_EDICT_BITS)
+ 

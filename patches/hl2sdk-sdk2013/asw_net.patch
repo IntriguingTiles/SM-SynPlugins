@@ -1,0 +1,40 @@
+diff --git a/public/dt_send.h b/public/dt_send.h
+index 88f88fb9..fff6edd8 100644
+--- a/public/dt_send.h
++++ b/public/dt_send.h
+@@ -244,6 +244,9 @@ public:
+ 	const void*			GetExtraData() const;
+ 	void				SetExtraData( const void *pData );
+ 
++	byte 				GetPriority() const;
++	void				SetPriority( byte priority );
++
+ public:
+ 
+ 	RecvProp		*m_pMatchingRecvProp;	// This is temporary and only used while precalculating
+@@ -265,6 +268,8 @@ public:
+ 
+ 	const char		*m_pVarName;
+ 	float			m_fHighLowMul;
++
++	byte			m_priority;
+ 	
+ private:
+ 
+@@ -430,6 +435,16 @@ inline void SendProp::SetExtraData( const void *pData )
+ 	m_pExtraData = pData;
+ }
+ 
++inline byte SendProp::GetPriority() const
++{
++	return m_priority;
++}
++
++inline void	SendProp::SetPriority( byte priority )
++{
++	m_priority = priority;
++}
++
+ 
+ // -------------------------------------------------------------------------------------------------------------- //
+ // SendTable.
