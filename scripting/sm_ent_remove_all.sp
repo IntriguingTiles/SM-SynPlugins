@@ -5,7 +5,7 @@ public Plugin myinfo =
 {
 	name = "sm_ent_remove_all",
 	author = "IntriguingTiles",
-	description = "Removes all entities of a given classname.",
+	description = "Removes all entities of a given classname or targetname.",
 	version = "1.0"
 };
 
