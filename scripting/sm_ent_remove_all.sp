@@ -22,16 +22,35 @@ public Action Cmd_EntRemoveAll(int client, int args)
 		return Plugin_Handled;
 	}
 
-	char classname[64];
-	GetCmdArg(1, classname, sizeof(classname));
+	char entname[64];
+	GetCmdArg(1, entname, sizeof(entname));
 
-	int entity = FindEntityByClassname(-1, classname);
+	int maxEnts = GetMaxEntities() * 2;
 
-	while (entity != -1)
+	for (int ent = 0; ent < maxEnts; ent++)
 	{
-		RemoveEntity(entity);
-		ShowActivity2(client, "[SM] ", "removed entity %s %i", classname, entity);
-		entity = FindEntityByClassname(entity, classname);
+		if (!IsValidEntity(ent)) continue;
+
+		char targetname[128];
+		GetEntPropString(ent, Prop_Data, "m_iName", targetname, sizeof(targetname));
+
+		if (StrEqual(targetname, entname, false))
+		{
+			char classname[64];
+			GetEntityClassname(ent, classname, sizeof(classname));
+			RemoveEntity(ent);
+			ShowActivity2(client, "[SM] ", "removed entity %s (%s) %i", entname, classname, ent);
+		}
+	}
+
+	// try again but with the classname
+	int ent = FindEntityByClassname(-1, entname);
+
+	while (ent != -1)
+	{
+		RemoveEntity(ent);
+		ShowActivity2(client, "[SM] ", "removed entity %s %i", entname, ent);
+		ent = FindEntityByClassname(ent, entname);
 	}
 
 	return Plugin_Handled;
