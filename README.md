@@ -8,7 +8,6 @@ A collection of SourceMod plugins for Synergy focused on making server administr
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `antinoclip`                | [OBSOLETE] An attempt to mitigate strange issues relating to players gaining noclip under certain conditions.                             |
 | `antitroll`                 | Aims to prevent players from disrupting the game. Currently restricts usage of `impulse 50` (squad control) and the EP2 jalopy to admins. |
-| `disable_d3_c17_10b_lasers` | Automatically disables the laser puzzle in d3_17_10b.                                                                                     |
 | `early_reservedslots`       | Runs the reserve type 0 logic as soon as possible in the connection process. Requires `reservedslots.smx`.                                |
 | `invincible_striders`       | Makes striders invincible on d3_c17_13 and ep1_c17_06 until an admin runs `sm_enable_strider_dmg`.                                        |
 | `npc_utils`                 | Teleporting and spawning NPCs (plus the jalopy).                                                                                          |
