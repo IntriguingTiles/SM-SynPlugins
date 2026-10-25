@@ -23,7 +23,6 @@ Database g_db;
 // these are global to avoid doing unneeded memory allocations during events
 MAKE_VAR(mapname, 65);
 
-MAKE_VAR(ip, 46);
 MAKE_VAR(steam2, MAX_AUTHID_LENGTH);
 
 MAKE_VAR(weapon, 33);
@@ -36,7 +35,7 @@ bool ignoreTimerTick = true;
 
 public bool CreateTables()
 {
-	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS players (steamid TEXT PRIMARY KEY, ipaddr TEXT)"))
+	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS players (steamid TEXT PRIMARY KEY)"))
 		return false;
 	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS deaths (id INTEGER PRIMARY KEY, mapname TEXT NOT NULL, killerID INTEGER NOT NULL, victimID INTEGER NOT NULL, weapon TEXT NOT NULL, suicide INTEGER NOT NULL DEFAULT 0, killername TEXT NOT NULL, victimname TEXT NOT NULL)"))
 		return false;
@@ -70,7 +69,6 @@ public void OnPluginStart()
 	/*
 	CREATE TABLE IF NOT EXISTS players (
 		steamid TEXT PRIMARY KEY,
-		ipaddr TEXT
 	);
 
 	CREATE TABLE IF NOT EXISTS deaths (
@@ -130,16 +128,11 @@ public void OnClientPostAdminCheck(int client)
 	bool success = GetClientAuthId(client, AuthId_Steam2, steam2, sizeof(steam2), false);
 	if (success)
 	{
-		success = GetClientIP(client, ip, sizeof(ip));
-		if (success)
-		{
-			// add to db
-			ESCAPE(steam2);
-			ESCAPE(ip);
-			Format(query, sizeof(query), "INSERT INTO players VALUES ('%s', '%s') ON CONFLICT DO NOTHING", steam2escaped, ipescaped);
-			LogMessage("%s", query);
-			SQL_TQuery(g_db, SQLCallback, query);
-		}
+		// add to db
+		ESCAPE(steam2);
+		Format(query, sizeof(query), "INSERT INTO players VALUES ('%s') ON CONFLICT DO NOTHING", steam2escaped);
+		LogMessage("%s", query);
+		SQL_TQuery(g_db, SQLCallback, query);
 	}
 }
 
