@@ -132,7 +132,7 @@ public void OnClientPostAdminCheck(int client)
 	{
 		// add to db
 		ESCAPE(steam2);
-		Format(query, sizeof(query), "INSERT INTO players VALUES ('%s') ON CONFLICT DO NOTHING", steam2escaped);
+		FormatEx(query, sizeof(query), "INSERT INTO players VALUES ('%s') ON CONFLICT DO NOTHING", steam2escaped);
 		LogMessage("%s", query);
 		SQL_TQuery(g_db, SQLCallback, query);
 	}
@@ -169,7 +169,7 @@ void OnEntityDeath(Event event, const char[] name, bool dontBroadcast)
 	ESCAPE(weapon);
 	ESCAPE(killername);
 	ESCAPE(victimname);
-	Format(query, sizeof(query), "INSERT INTO deaths (mapname, killerID, victimID, weapon, suicide, killername, victimname) VALUES ('%s', %d, %d, '%s', %d, '%s', '%s')",
+	FormatEx(query, sizeof(query), "INSERT INTO deaths (mapname, killerID, victimID, weapon, suicide, killername, victimname) VALUES ('%s', %d, %d, '%s', %d, '%s', '%s')",
 		   mapnameescaped, killerID, victimID, weaponescaped, suicide, killernameescaped, victimnameescaped);
 	LogMessage("%s", query);
 	SQL_TQuery(g_db, SQLCallback, query);
@@ -191,7 +191,7 @@ public Action OnTimer(Handle timer)
 	int players = GetClientCount();
 	int edicts = GetEntityCount();
 	float tps = GetServerFPS();
-	Format(query, sizeof(query), "INSERT INTO server_stats (mapname, tps, playercount, edictcount) VALUES('%s', %f, %d, %d)", mapnameescaped, tps, players, edicts);
+	FormatEx(query, sizeof(query), "INSERT INTO server_stats (mapname, tps, playercount, edictcount) VALUES('%s', %f, %d, %d)", mapnameescaped, tps, players, edicts);
 	LogMessage("%s", query);
 	SQL_TQuery(g_db, SQLCallback, query);
 
