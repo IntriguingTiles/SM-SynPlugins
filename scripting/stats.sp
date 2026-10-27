@@ -125,6 +125,7 @@ public void SQLCallback(Handle owner, Handle hndl, const char[] error, any data)
 
 public void OnClientPostAdminCheck(int client)
 {
+	if (IsFakeClient(client)) return;
 	// SteamID logging? would be most reliable source of unique info
 	bool success = GetClientAuthId(client, AuthId_Steam2, steam2, sizeof(steam2), false);
 	if (success)
