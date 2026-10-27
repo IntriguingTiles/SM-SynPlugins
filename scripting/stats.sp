@@ -37,7 +37,7 @@ public bool CreateTables()
 {
 	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS players (steamid TEXT PRIMARY KEY)"))
 		return false;
-	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS deaths (id INTEGER PRIMARY KEY, mapname TEXT NOT NULL, killerID INTEGER NOT NULL, victimID INTEGER NOT NULL, weapon TEXT NOT NULL, suicide INTEGER NOT NULL DEFAULT 0, killername TEXT NOT NULL, victimname TEXT NOT NULL)"))
+	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS deaths (id INTEGER PRIMARY KEY, timestamp TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, mapname TEXT NOT NULL, killerID INTEGER NOT NULL, victimID INTEGER NOT NULL, weapon TEXT NOT NULL, suicide INTEGER NOT NULL DEFAULT 0, killername TEXT NOT NULL, victimname TEXT NOT NULL)"))
 		return false;
 	if (!SQL_FastQuery(g_db, "CREATE TABLE IF NOT EXISTS achievement (count INTEGER NOT NULL DEFAULT 0)"))
 		return false;
@@ -73,6 +73,7 @@ public void OnPluginStart()
 
 	CREATE TABLE IF NOT EXISTS deaths (
 		id INTEGER PRIMARY KEY,
+		timestamp TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
 		mapname TEXT NOT NULL,
 		killerID INTEGER NOT NULL,
 		victimID INTEGER NOT NULL,
