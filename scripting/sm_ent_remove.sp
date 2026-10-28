@@ -16,7 +16,14 @@ public void OnPluginStart()
 
 public Action Cmd_EntRemove(int client, int args)
 {
+	if (args > 0)
+	{
+		ReplyToCommand(client, "[SM] sm_ent_remove removes by aim only, did you mean sm_ent_remove_all?");
+		return Plugin_Handled;
+	}
+
 	int target = GetClientAimTarget(client, false);
+
 	if (target < 0)
 	{
 		ReplyToCommand(client, "[SM] Trace hit nothing");
